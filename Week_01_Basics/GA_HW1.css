@@ -1,0 +1,132 @@
+/* Stylesheet for FEWD25 Week 1 Homework, Andy Aronoff */
+
+<style>
+	
+	body{
+
+	}
+	header {
+		width: 101%;
+		height: 40px;
+		background-color: #5C5858; /* medium gray */
+		position: fixed;
+		margin: -100px 0 0 -10px;
+	}
+	.container {
+		text-align: center;
+	}
+	.navi {
+		list-style: none;
+		padding: 0;
+		display: inline;
+		width: 600px;
+		font-family: "Sarina";
+	}
+		.navi a {
+			float: right;
+			display: block;
+			width: 120px;
+			color: #2A2626; /* dark dray */
+			padding: 10px 0px 10px 18px;
+			text-decoration: none;
+			border-left: double #2A2626; /* dark dray */
+		}
+		.navi a:hover {
+			background-color: #2A2626; /* dark dray */
+			color: #5C5858; 
+			border-left-color: #5C5858; /* medium gray */
+		}
+	.main {
+		font-family: "Alegreya SC";
+		font-weight: 400;	
+		width: 600px;
+		text-align: center;
+		margin: 100px auto 0 auto;
+		color: #2A2626; /* dark dray */
+	}
+	.f400 {
+		font-family: "Alegreya SC";	
+		font-weight: 400;
+	}
+	.f700 {
+		font-family: "Alegreya SC";	
+		font-weight: 700;
+	}
+	.f900 {
+		font-family: "Alegreya SC";	
+		font-weight: 900;
+	}
+	#profile {
+		background: url(images/manga.png);
+		width: 179px;
+		height: 180px;
+		background-position: center center;
+		border-style: none;
+		color: transparent;
+	}
+	footer {
+		width: 600px;
+		position: relative;
+		text-align: center;
+		padding: 0 0 80px 180px;
+		margin-top: 20px;
+	}
+		footer a {
+			text-decoration: none;
+		}
+		footer img:hover {
+			opacity: .4;
+		}
+	.social {
+		list-style: none;
+	}
+		#facebook {
+			height: 49px;
+			width: 49px;
+			border-style: none;
+			background: url(images/free-social-media-icon-set.png) -19px -3px; /* x y */
+			background-size: 350px 190px;
+			margin-right: 5px;
+			float: left;
+			color: transparent;
+		}
+		#linkedin {
+			height: 49px;
+			width: 49px;
+			border-style: none;
+			background: url(images/free-social-media-icon-set.png) -276px -3px; 
+			background-size: 350px 190px;
+			margin-right: 5px;
+			float: left;
+			color: transparent;
+		}
+		#github {
+			height: 49px;
+			width: 49px;
+			border-style: none;
+			background: url(https://www.thoughtworks.com/imgs/icons/social/github.png) -9px -9px; /* x y */
+			background-size: 67px 67px;
+			/* margin-right: 5px  --dont use since last item */
+			float: left;
+			color: transparent;
+		}
+	.grid {
+		width: 600px;
+		margin: 0 0 0 20px;
+	}
+	.tile {
+		width: 100px;
+		height: 62px;
+		float: left;
+		background-color: #6495ED; /* profile blue */
+		color: white;
+		text-align: center;
+		padding-top: 38px;
+		font-family: "Alegreya SC";
+		font-weight: 700;
+		margin-right: 15px;	
+	}
+		.tile:hover {
+			background-color: #5C5858; /* medium gray */
+		}
+</style>
