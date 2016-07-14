@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!-- Project Name: FEWD DC 25, Week 4 Homework
+Client: Your Client
+Author: Andy Aronoff
+Developer @GA in DC -->
+
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Relaxr</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+			<header>
+				<h1>Relaxr</h1>
+				<nav>
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="clearfix">
+				<div class="left-container">
+					<div class="article">
+						<h2>How I implemented Relaxr in 2 weeks and changed my life.</h2>
+						<img src="images/blog_photo1.jpg" alt="Blog Photo 1" height="" width="" />
+						<p><span class="first-character">L</span>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<div class="article-footer">
+							<a href="#">Read More ></a>
+						</div> <!-- article-footer -->
+					</div> <!-- article -->
+					<div class="article">
+						<h2>How I implemented Relaxr in 2 weeks and changed my life.</h2>
+						<img src="images/blog_photo2.jpg" alt="Blog Photo 2" height="" width="" />
+						<p><span class="first-character">C</span>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.<br><br>
+						The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+						<div class="article-footer">
+							<a href="#">Read More ></a>
+						</div> <!-- article-footer -->
+					</div> <!-- article -->
+				</div> <!-- left-container -->
+				<div class="right-container">
+					<div class="block">
+						<h3>Categories</h3>
+						<ul>
+							<li>Success stories</li>
+							<li>Stats</li>
+							<li>How tos</li>
+							<li>Best of</li>
+							<li>Business tips</li>
+						</ul>
+					</div> <!-- block -->
+					<div class="block">
+						<h3>About Relaxr</h3>
+						<p>Proin sed justo cel sapien varius auctor. Proin scelerisque massa at luctus tincidunt. Fusce porttitor, spaien sed tincidunt fringilla.</p>
+						<a href="#">Learn More</a>
+					</div> <!-- block -->
+					<div class="block">
+						<img src="images/ad-unit.png" alt="AD block" />
+					</div> <!-- block -->
+				</div> <!-- right-container -->
+			</section>
+
+			<footer>
+				<div class="yellow-container">
+<!-- attempt 1 - for popup window
+  					<script type="text/javascript">
+						function newPopup(url) {
+							popupWindow = window.open(
+								url,'popUpWindow','height=360,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+						}
+					</script>  -->
+
+<!-- attempt 3 - for popup window -->
+					<button onclick="myFunction()"><!-- <a href="JavaScript:newPopup('popup.html')";> -->Sign Up Now!<!-- </a> --></button>
+				</div>
+
+				<h4>Relaxr</h4>
+				<img src="images/twitter.png" alt="Twitter" />
+				<img src="images/facebook.png" alt="Facebook" />
+				<p>Copyright 2015. Relaxr.</p>
+			</footer> <!-- yellow-container -->
+
+<!--attempt 2 - for popup window, Caitlin		||		Javascript
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js">
+			</script> <!-- linking jquery ->
+			<script>
+				$("button").on("click",function(){
+					alert("We're Not Ready for Sign-Ups...Yet.")
+				})
+			</script> -->
+<!-- attempt 3 for popup window -->
+			<script>
+				function myFunction() {
+				   alert("We're Not Ready For Sign-Ups...Yet.");
+				}
+			</script>
+	</body>
+</html>
