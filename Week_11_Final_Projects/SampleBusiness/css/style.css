@@ -1,0 +1,292 @@
+/*
+Project Name: Sample Business Site
+Client: FEWD25, Final Project
+Author: Andy Aronoff
+Developer @GA in DC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+/*
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image 
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image 
+}*/
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  /*added by Andy*/
+  width: 100%;
+  background-color: hsla(0, 3%, 94%, 1); /*background color*/
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  margin: auto;
+}
+
+header {
+  background-color: hsla(201, 92%, 15%, 1); /*dark blue*/
+  height: 100px;
+  padding-top: 10px;
+}
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  background-color: hsla(0, 0%, 7%, 1); /*almost black*/
+  margin-top: 70px;
+  min-height: 200px;
+}
+  footer img {
+    margin: 10px 20px 10px 0;
+  }
+  footer h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 30px; /*font size and style not specified*/
+    color: hsla(54, 94%, 58%, 1); /*yellow*/
+    width: 300px;
+    margin: 30px auto;
+  }
+  footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px; /*font size and style not specified*/
+    color: hsla(0, 3%, 94%, 1); /*background color*/
+    width: 300px;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px; /*font size and style not specified*/
+  color: hsla(0, 3%, 94%, 1); /*background color*/
+  width: 300px;
+  margin: 10px 20px 0 12%;
+}
+
+nav {
+  display: block;
+  float: right;
+  margin-top: -40px;
+}
+
+nav a, nav a:active, nav a:focus, nav a:visited {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  color: hsla(54, 94%, 58%, 1); /*yellow*/
+  margin-left: 10px;
+}
+  nav a:hover {
+    color: hsla(180, 1%, 38%, 1); /*light grey*/
+  }
+  nav ul {
+    list-style: none;
+    width: 530px;
+  }
+  nav li {
+    display: inline-block;
+  }
+    nav li:last-of-type {
+      margin-right: 12%;
+    }
+
+.left-container {
+  min-height: 50px;
+  padding: 20px; 
+  float: left;
+  max-width: 660px; /*700px total*/
+  width: 76.7%;
+  min-width: 330px;
+  margin-left: 3%;
+}
+
+.right-container {
+  min-height: 50px;
+  padding: 20px;
+  float: left;
+  max-width: 200px; /*240px total*/
+  width: 30.3%;
+  min-width: 100px;
+  margin-left: 3%; /*20px*/
+}
+
+.article {
+  min-height: 50px;
+  padding: 20px 20px 0 20px;
+}
+  .article h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+  }
+  .article img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  .article p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: hsla(180, 1%, 38%, 1); /*light grey*/
+  }
+/*    tried it with CSS3 and it did not work
+      .article p:first-child:first-letter { 
+      float: left; 
+      font-size: 75px; 
+      line-height: 60px; 
+      padding-top: 4px; 
+      padding-right: 8px; 
+      padding-left: 3px; 
+    }*/
+    .first-character {
+      float: left; 
+      font-size: 75px; 
+      line-height: 60px; 
+      padding-top: 4px; 
+      padding-right: 8px; 
+      padding-left: 3px; 
+    }
+
+.article-footer {
+  text-align: right;
+  height: 50px;
+  padding: 0 0 80px 0;
+  border-bottom: 2px solid hsla(180, 1%, 38%, 1); /*light grey*/;
+}
+  .article-footer a, .article-footer a:active, .article-footer a:focus, .article-footer a:visited {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+    float: right;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+    .article-footer a:hover {
+      color: hsla(180, 1%, 38%, 1); /*light grey*/
+    }
+
+.block {
+  margin-top: 30px;
+}
+  .block h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+  }
+  .block li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+  }
+  .block p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+  }
+  .block a, .block a:active, .block a:focus, .block a:visited {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: hsla(201, 92%, 15%, 1); /*dark blue*/
+    text-decoration: none;
+  }
+    .block a:hover {
+      color: hsla(180, 1%, 38%, 1); /*light grey*/
+    }
+  .block img {
+    width: 100%;
+    height: auto;
+  }
+
+.yellow-container {
+  min-height: 50px;
+  background-color: hsla(54, 94%, 58%, 1); /*yellow*/
+  padding: 20px;
+}
+  .yellow-container button {
+    color: hsla(360, 100%, 100%, 1); /*white*/
+    background-color: hsla(201, 92%, 15%, 1); /*dark blue*/
+    border: none;
+    border-radius: 5px;
+    padding: 5px 40px;
+  }
+  .yellow-container button, .yellow-container button:active, .yellow-container button:focus, .yellow-container button:visited {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px; /*font size and style not specified*/
+    text-decoration: none;
+    color: hsla(0, 3%, 94%, 1); /*background color*/
+}
+  .yellow-container button:hover {
+    color: hsla(180, 1%, 38%, 1); /*light grey*/
+  }
+
+/*code for attempt 1 for the popup*/
+.popup {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px; /*font size and style not specified*/
+  text-decoration: none;
+  color: hsla(0, 0%, 7%, 1); /*almost black*/
+  text-align: center;
+  margin-top: 65px;
+  height: 0px;
+}
