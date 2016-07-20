@@ -3,6 +3,14 @@ Project Name: FEWD DC 25, Week 4 Homework
 Client: Your Client
 Author: Andy Aronoff
 Developer @GA in DC
+
+Some thoughts on your CSS:
+Excellent overall, you've got almost every concept down pat.
+You can start thinking about some higher-level concepts:
+  -Best practice I like to do is alphabetize declarations inside of CSS selectors (I did this on your footer to show you)
+  -Typically, you don't want to indent any of your CSS - keep it left aligned.
+  -Think about tabbing/spaces - best practice is two spaces. You can set your text editor to do this by default.
+  -Drop cap selector was almost right - you didn't need :first-child because you only had one paragraph.
 */
 
 
@@ -12,17 +20,17 @@ Developer @GA in DC
 
 /* Box Model Hack */
 * {
-     box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -81,38 +89,41 @@ footer {
   margin-top: 70px;
   min-height: 200px;
 }
-  footer img {
-    margin: 10px 20px 10px 0;
-  }
-  footer h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 30px; /*font size and style not specified*/
-    color: hsla(54, 94%, 58%, 1); /*yellow*/
-    width: 300px;
-    margin: 30px auto;
-  }
-  footer p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px; /*font size and style not specified*/
-    color: hsla(0, 3%, 94%, 1); /*background color*/
-    width: 300px;
-    padding: 30px 0;
-    margin: 0 auto;
-  }
+
+footer img {
+  margin: 10px 20px 10px 0;
+}
+
+footer h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 30px; /*font size and style not specified*/
+  color: hsla(54, 94%, 58%, 1); /*yellow*/
+  width: 300px;
+  margin: 30px auto;
+}
+
+footer p {
+  color: hsla(0, 3%, 94%, 1); /*background color*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px; /*font size and style not specified*/
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 300px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
 h1 {
+  color: hsla(0, 3%, 94%, 1); /*background color*/
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 36px; /*font size and style not specified*/
-  color: hsla(0, 3%, 94%, 1); /*background color*/
-  width: 300px;
   margin: 10px 20px 0 12%;
+  width: 300px;
 }
 
 nav {
@@ -145,7 +156,7 @@ nav a, nav a:active, nav a:focus, nav a:visited {
 
 .left-container {
   min-height: 50px;
-  padding: 20px; 
+  padding: 20px;
   float: left;
   max-width: 660px; /*700px total*/
   width: 76.7%;
@@ -184,23 +195,20 @@ nav a, nav a:active, nav a:focus, nav a:visited {
     font-size: 24px;
     color: hsla(180, 1%, 38%, 1); /*light grey*/
   }
-/*    tried it with CSS3 and it did not work
-      .article p:first-child:first-letter { 
-      float: left; 
-      font-size: 75px; 
-      line-height: 60px; 
-      padding-top: 4px; 
-      padding-right: 8px; 
-      padding-left: 3px; 
-    }*/
-    .first-character {
-      float: left; 
-      font-size: 75px; 
-      line-height: 60px; 
-      padding-top: 4px; 
-      padding-right: 8px; 
-      padding-left: 3px; 
-    }
+
+/* Corrected selector for drop-cap
+   Because you only have one paragraph, you don't need first child here
+   If you had multiple paragraphs your old selector would have been right
+*/
+
+.article p:first-letter {
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
 
 .article-footer {
   text-align: right;
