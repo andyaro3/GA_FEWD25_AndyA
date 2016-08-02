@@ -152,6 +152,12 @@ nav {
 main { /* .home */
   margin: 200px 0 150px 0;
 }
+  main video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: -150px;
+  }
 
 hr {
   width: 60%;
@@ -169,12 +175,7 @@ section {
     font-size: 30px;
     padding: 40px 0;
   }
-  section p {
-    margin: auto;
-    max-width: 900px;
-    min-width: 300px;
-    width: 60%;
-  }
+
 
 .gradient {
   /* background gradient */
@@ -198,10 +199,94 @@ section {
     padding: 5px;
   }
 
+.outer {
+  width: 70%;
+  min-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+/*  border: 1px solid black;*/
+/*
+  -webkit-transition-delay: .1s; 
+  -moz-transition-delay: .1s; 
+  -ms-transition-delay: .1s; 
+  -o-transition-delay: .1s; 
+  transition-delay: .1s;*/
+}
+
+.innerGallery {
+  width: 261px;
+  text-align: center;
+  padding: 2.5px;
+/*  border: 1px dashed black;*/
+  overflow: hidden;
+  margin: auto;
+
+/*
+  -webkit-transition-delay: .1s; 
+  -moz-transition-delay: .1s; 
+  -ms-transition-delay: .1s; 
+  -o-transition-delay: .1s; 
+  transition-delay: .1s;*/
+}
+  @media (min-width: 759px) {
+  .innerGallery {
+    width: 517px;
+  }
+}
+  @media (min-width: 1119px) {
+  .innerGallery {
+    width: 773px;
+  }
+}
+
+.tile {
+  width: 250px;
+  height: 250px; /*auto*/
+  margin: 2.5px;
+  float: left;
+  background-color: blue;
+/*
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;*/
+}
+  .tile:hover {
+    background-color: black;
+  }
+
 footer {
   width: 100%;
-  height: 200px;
+  height: 275px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
   color: hsla(194, 25%, 85%, 1); /* pale blue grey */
   box-shadow: 0 -5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
+}
+  footer h2 {
+    display: block;
+    font-family: "Covered By Your Grace";
+    font-size: 30px;
+    padding: 40px 0;
+  }
+  footer li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+  footer ul {
+    margin-bottom: 40px;
+  }
+
+.socialIcon {
+  height: 50px;
+  width: 50px;
+}
+
+#facebook {
+}
+
+#linkedIn{
+}
+
+#gitHub {
 }

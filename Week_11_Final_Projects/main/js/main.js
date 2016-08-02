@@ -6,10 +6,25 @@ $(document).ready(function() {
 // Developer @GA in DC
 
 
+$("#contactLinkX").click(function(){
+  $.scrollTo($("<footer>"), {
+    duration: 600
+  });
+  return false;
+});
 
+$("#worksLinkX").click(function(){
+  $.scrollTo($("html"), {
+    duration: 600
+  });
+  return false;
+});
 
-
-
-
+$("#homeLinkX").click(function(){
+  $.scrollTo($("html"), {
+    duration: 600
+  });
+  return false;
+});
 
 }); //close document.ready
