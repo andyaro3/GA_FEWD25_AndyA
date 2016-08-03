@@ -91,6 +91,7 @@ header {
   top: 0;
   height: 70px;
   box-shadow: 0 5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
+  z-index: 1;
 }
   header h1 {
     display: none;
@@ -176,7 +177,6 @@ section {
     padding: 40px 0;
   }
 
-
 .gradient {
   /* background gradient */
   background: hsla(194, 25%, 85%, 1); /* For browsers that do not support gradients */
@@ -237,6 +237,11 @@ section {
   .innerGallery {
     width: 773px;
   }
+}
+
+#gallery {
+  display: none;
+  z-index: 0;
 }
 
 .tile {

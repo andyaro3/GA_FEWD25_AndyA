@@ -5,16 +5,26 @@ Client: FEWD25
 Author: Andy Aronoff
 Developer @GA in DC -->
 
-<html>
+<!-- <html> --> <!-- Unite Gallery -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="one, two, three">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Unite Gallery -->
 
 	<title>A.Aronoff</title>
 
-	<!-- Google Fonts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<!-- Unite Gallery links --> 
+	<script type="text/javascript" src="js/unitegallery-master/package/unitegallery/js/jquery-11.0.min.js"></script>	
+	<script type="text/javascript" src="js/unitegallery-master/package/unitegallery/js/unitegallery.min.js"></script>	
+	<link rel="stylesheet" href="js/unitegallery-master/package/unitegallery/css/unite-gallery.css" type="text/css" />	
+	<script type="text/javascript" src="js/unitegallery-master/package/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+
+	<!-- Google Font links -->
 	<link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700italic,500italic,500,700,300italic,300,400italic' rel='stylesheet' type='text/css'>
 
@@ -38,7 +48,7 @@ Developer @GA in DC -->
 		</nav>
 	</header>
 
-	<a name="homeLink" class="anchor"></a>
+	<a id="homeLink" class="anchor"></a>
 
 	<main>
 		<h2></h2>
@@ -50,7 +60,7 @@ Developer @GA in DC -->
 	</main>
 	<hr>
 
-	<a name="aboutLink" class="anchor"></a>
+	<a id="aboutLink" class="anchor"></a>
 	<section class="about">
 		<h2>ICE BREAKER</h2>
 		<table class="iceBreaker">
@@ -81,54 +91,219 @@ Developer @GA in DC -->
 		</table>
 	</section>
 	<hr>
-
-	<a name="worksLink" class="anchor"></a>
-	<section id="worksLinkX" class="testRef">
+	<a id="worksLink" class="anchor"></a>
+	<section>
 		<h2>WORKS</h2>
 		<a href="http://unitegallery.net/">UniteGallery and tiles</a>
-		<div class="outerGallery">
-			<div class="innerGallery">
-				<div class="tile">
-<!-- 					<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12065763_10153709079944783_6674541300564734438_n.jpg?oh=54b1b6c677a726a438c750baf130b12f&oe=582E36A2" alt="example1" /> -->
-				</div>
-				<div class="tile">
-<!-- 					<img class="sample" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/11219225_10153709080059783_4461572433420173519_n.jpg?oh=bea9b7bc3598c3696c67e77ca3736266&oe=5830C3D4" alt="example2" /> -->
-				</div>
-				<div class="tile">
-<!-- 					<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12065636_10153709080749783_8989302689220695593_n.jpg?oh=489d4814e322a46dedc95ab7d5609fdc&oe=5812C9CF" alt="example3" /> -->
-				</div>
-				<div class="tile">
-<!-- 					<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12065632_10153709081154783_5350948551283149271_n.jpg?oh=53615b56177c1838d7317edb2122093a&oe=585D4FC2" alt="example4" /> -->
-				</div>
-				<div class="tile">
-		<!-- 			<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12039594_10153709081404783_3782991044720800332_n.jpg?oh=748a6d27622da2e3289452d3ac86c0da&oe=5818EEDA" alt="example5" /> -->
-				</div>
-				<div class="tile">
-		<!-- 			<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12046967_10153709082129783_3041588224299643845_n.jpg?oh=6bc5bb6da13c62f82576d7d3a76d5e66&oe=581724C6" alt="example6" />  -->
-				</div>
-				<div class="tile">
-			<!-- 		<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12042966_10153709083214783_4753679350106016767_n.jpg?oh=dca746c02438fad28d93057cafa5c7e5&oe=582980BF" alt="example7" /> -->
-				</div>
-				<div class="tile">
-		<!-- 			<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12038137_10153709083894783_1339593852174743850_n.jpg?oh=3ab7ea27670c62f1c4c302074914c401&oe=585E03FF" alt="example8" /> -->
-				</div>
-			</div>
-		</div>
+		<div class="outer">
+			<div id="gallery" style="display:none;">
+
+				<a href="http://unitegallery.net">
+				<img alt="Lemon Slice"
+				     src="js/unitegallery-master/package/images/thumbs/tile1.jpg"
+				     href="http://www.facebook.com"
+				     data-description="This is a Lemon Slice"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Peppers"
+				     src="js/unitegallery-master/package/images/thumbs/tile2.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile2.jpg"
+				     data-description="Those are peppers"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Keys"
+				     src="js/unitegallery-master/package/images/thumbs/tile3.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile3.jpg"
+				     data-description="Those are keys"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Friuts in cup"
+				     src="js/unitegallery-master/package/images/thumbs/tile4.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile4.jpg"
+				     data-description="Those are friuts in a cup"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Yellow Flowers"
+				     src="js/unitegallery-master/package/images/thumbs/tile5.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile5.jpg"
+				     data-description="Those are yellow flowers"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Butterfly"
+				     src="js/unitegallery-master/package/images/thumbs/tile6.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile6.jpg"
+				     data-description="This is butterfly"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Boat"
+				     src="js/unitegallery-master/package/images/thumbs/tile7.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile7.jpg"
+				     data-description="This is a boat"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Woman"
+				     src="js/unitegallery-master/package/images/thumbs/tile8.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile8.jpg"
+				     data-description="This is a woman"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Cup Of Coffee"
+				     src="js/unitegallery-master/package/images/thumbs/tile9.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile9.jpg"
+				     data-description="This is cup of coffee"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Iphone Back"
+				     src="js/unitegallery-master/package/images/thumbs/tile10.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile10.jpg"
+				     data-description="This is iphone back"
+				     style="display:none">
+				</a>
+				<a href="http://unitegallery.net">
+				<img alt="Lemon Slice"
+				     src="js/unitegallery-master/package/images/thumbs/tile1.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile1.jpg"
+				     data-description="This is a Lemon Slice"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Peppers"
+				     src="js/unitegallery-master/package/images/thumbs/tile2.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile2.jpg"
+				     data-description="Those are peppers"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Keys"
+				     src="js/unitegallery-master/package/images/thumbs/tile3.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile3.jpg"
+				     data-description="Those are keys"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Friuts in cup"
+				     src="js/unitegallery-master/package/images/thumbs/tile4.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile4.jpg"
+				     data-description="Those are friuts in a cup"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Yellow Flowers"
+				     src="js/unitegallery-master/package/images/thumbs/tile5.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile5.jpg"
+				     data-description="Those are yellow flowers"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Butterfly"
+				     src="js/unitegallery-master/package/images/thumbs/tile6.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile6.jpg"
+				     data-description="This is butterfly"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Boat"
+				     src="js/unitegallery-master/package/images/thumbs/tile7.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile7.jpg"
+				     data-description="This is a boat"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Woman"
+				     src="js/unitegallery-master/package/images/thumbs/tile8.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile8.jpg"
+				     data-description="This is a woman"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Cup Of Coffee"
+				     src="js/unitegallery-master/package/images/thumbs/tile9.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile9.jpg"
+				     data-description="This is cup of coffee"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Iphone Back"
+				     src="js/unitegallery-master/package/images/thumbs/tile10.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile10.jpg"
+				     data-description="This is iphone back"
+				     style="display:none">
+				</a>
+				<a href="http://unitegallery.net">
+				<img alt="Lemon Slice"
+				     src="js/unitegallery-master/package/images/thumbs/tile1.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile1.jpg"
+				     data-description="This is a Lemon Slice"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Peppers"
+				     src="js/unitegallery-master/package/images/thumbs/tile2.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile2.jpg"
+				     data-description="Those are peppers"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Keys"
+				     src="js/unitegallery-master/package/images/thumbs/tile3.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile3.jpg"
+				     data-description="Those are keys"
+				     style="display:none">
+				</a>
+
+				<a href="http://unitegallery.net">
+				<img alt="Friuts in cup"
+				     src="js/unitegallery-master/package/images/thumbs/tile4.jpg"
+				     data-image="js/unitegallery-master/package/images/big/tile4.jpg"
+				     data-description="Those are friuts in a cup"
+				     style="display:none">
+				</a>
+			</div> <!-- #gallery close -->
+		</div> <!-- .outer close -->
 	</section>
 	<hr>
 
-	<a name="resumeLink" class="anchor"></a>
+	<a id="resumeLink" class="anchor"></a>
 	<section class="testRef">
 		<h2>RESUM&Eacute</h2>
 		<div class="outer">
 		</div>
 	</section>
 	
-	<a name="contactLink"></a>
+	<a id="contactLink"></a>
 	<footer>
 		<h2>Contact</h2>
 		<ul class="social">
-			<li><a href="http://www.facebook.com/andyaro3"> 
+			<li><a href="http://www.facebook.com/andyaro3">
 				<img src="images/free-social-media-icon-set.png" class="socialIcon" id="facebook" alt="Facebook/andyaro3" />
 			</a></li>
 			<li><a href="https://www.linkedin.com/in/andrew-aronoff-93b16267?trk=hp-identity-photo">
@@ -141,9 +316,15 @@ Developer @GA in DC -->
 		<p>&copy; 2016 | Andy Aronoff</p>
 	</footer>
 
-<!-- link jQuery and JavaScript file -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/main.js"></script>
+	<!-- link jQuery and JavaScript file -->
+		<!-- linked at top... <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+	<script src="js/main.js"></script>
+	<!-- call Unite Gallery --> 
+<!-- 	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery("#gallery").unitegallery();
+		});
+	</script>
+ -->
 </body>
-
 </html>

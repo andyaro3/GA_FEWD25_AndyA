@@ -5,26 +5,24 @@ $(document).ready(function() {
 // Author: Andy Aronoff
 // Developer @GA in DC
 
-
-$("#contactLinkX").click(function(){
-  $.scrollTo($("<footer>"), {
-    duration: 600
-  });
-  return false;
+// anchor animate
+var hrefFull
+var hrefName
+$("nav ul li a").click(function() {
+  event.preventDefault();
+  hrefFull = event.target.href;
+  console.log(hrefFull);
+  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
+  console.log(hrefName);
+  // $("html, body").delay(10).animate({
+  //     scrollTop: $(hrefName).offset().top 
+  //   }, 1000);
+  $("html, body").animate({
+      scrollTop: $(hrefName).offset().top 
+    }, 1000);
 });
 
-$("#worksLinkX").click(function(){
-  $.scrollTo($("html"), {
-    duration: 600
-  });
-  return false;
-});
-
-$("#homeLinkX").click(function(){
-  $.scrollTo($("html"), {
-    duration: 600
-  });
-  return false;
-});
+// call Unite Gallery
+$("#gallery").unitegallery();
 
 }); //close document.ready
