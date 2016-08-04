@@ -10,7 +10,7 @@ Developer @GA in DC
 /*************************************
 /* hsla(94, 53%, 48%, .8); /* sage green */
 /* hsla(194, 25%, 85%, 1); /* pale blue grey */
-/* hsla(194, 95%, 57%, 0.85); /* aqua blue */
+/*  hsla(194, 95%, 57%, 0.85); /* aqua blue */
 /* hsla(0, 0%, 0%, 1); /* black */
 /* hsla(0, 0%, 53%, 0.85); /* medium grey */
 /* hsla(360, 100%, 100%, 1); /* white */
@@ -91,7 +91,7 @@ header {
   top: 0;
   height: 70px;
   box-shadow: 0 5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
-  z-index: 2;
+  z-index: 1;
 }
   header h1 {
     display: none;
@@ -144,53 +144,14 @@ nav {
     nav:last-child li {
       margin-right: 7.5px;
     }
-    .codeBlue {
-      color: hsla(194, 95%, 57%, 0.85); /* aqua blue */;
-    }
-    @media (max-width: 759px) {
-      .mediaSmallHide {
+    @media (max-width: 530px) {
+      .mediaSmall {
         display: none;
       }
-      header {
-        height: 50px;
-      }
-      nav a {
-        height: 50px;
-        width: 80px;
-        font-size: 24px;
-        padding: 15px 0;
-      }
-    }
-    @media (max-width:400px) {
-      .mediaMobileHide {
-        display: none; /* create a resume page for mobile, download? */
-      }
-      header {
-        height: 40px;
-      }
-      nav a {
-        height: 40px;
-        width: 60px;
-        font-size: 20px;
-        padding: 10px 0;
-      }
     }
 
-#showCode {
-  height: 50%;
-  width: 70%;
-  background-color: white;
-  position: fixed;
-  top: 50px;
-  right: 2.5%;
-  opacity: .8;
-  z-index: 1;
-  display: none;
-}
-
-main { 
+main { /* .home */
   margin: 200px 0 150px 0;
-  z-index: 0;
 }
   main video {
     width: 100%;
@@ -259,6 +220,7 @@ section {
 /*  border: 1px dashed black;*/
   overflow: hidden;
   margin: auto;
+
 /*
   -webkit-transition-delay: .1s; 
   -moz-transition-delay: .1s; 
@@ -277,9 +239,14 @@ section {
   }
 }
 
+#gallery {
+  display: none;
+  z-index: 0;
+}
+
 .tile {
   width: 250px;
-  height: 250px; /* auto? */
+  height: 250px; /*auto*/
   margin: 2.5px;
   float: left;
   background-color: blue;
