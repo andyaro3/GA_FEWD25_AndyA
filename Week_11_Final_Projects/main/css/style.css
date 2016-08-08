@@ -180,6 +180,8 @@ nav {
   height: 50%;
   width: 70%;
   background-color: white;
+  color: black;
+  padding: 40px 10px 10px 10px;
   position: fixed;
   top: 50px;
   right: 2.5%;

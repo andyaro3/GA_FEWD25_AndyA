@@ -6,9 +6,10 @@ $(document).ready(function() {
 // Developer @GA in DC
 
 // anchor animate, showCode slideToggle
-var hrefFull
-var hrefName
-var hrefCode = 0
+var hrefFull;
+var hrefName;
+var hrefCode = 0;
+var pageCode =  document.getElementsByTagName("body").text;
 
 $("nav ul li a").click(function() {
   event.preventDefault();
@@ -18,11 +19,11 @@ $("nav ul li a").click(function() {
   console.log(hrefName);
 
   // #showCode slideToggle
-  // if (hrefName == "#showCode") {
-  //   $("#showCode").slideToggle(400);
   if (hrefName == "#showCode" && hrefCode == 0) {
     $("#showCode").slideDown(400);
     hrefCode = 1;
+    console.log(pageCode);
+    $("#showCode").text(pageCode);
   } else if (hrefName == "#showCode" && hrefCode == 1) {
     $("#showCode").slideUp(400);
     hrefCode = 0;
@@ -51,5 +52,6 @@ $(window).resize(function() {
     hrefCode = 0;
   };
 });
+
 
 }); //close document.ready
