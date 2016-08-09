@@ -179,15 +179,45 @@ nav {
 #showCode {
   height: 50%;
   width: 70%;
-  background-color: white;
-  color: black;
-  padding: 40px 10px 10px 10px;
+  background-color: black;
+  color: white;
+  padding: 20px 4px 5px 5px;
   position: fixed;
   top: 50px;
   right: 2.5%;
   opacity: .8;
   z-index: 1;
   display: none;
+}
+
+.codeBox {
+  width: 31%;
+  height: calc(100% - 2% - 5px);
+  margin: 1% 1% calc(1% + 5px) 1%;
+  float: left;
+  overflow: scroll;
+  font-size: 10.5px;
+  border: 1px solid white;
+  }
+  /* styling scrollbar within the showCode */
+  .codeBox::-webkit-scrollbar {
+    background-color: black;
+  }
+  .codeBox::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  .codeBox::-webkit-scrollbar-thumb {
+      background-color: grey;
+    }
+
+#htmlBox {
+  background-color: red;
+}
+#cssBox {
+  background-color: blue;
+}
+#jsBox {
+  background-color: green;
 }
 
 main { 
