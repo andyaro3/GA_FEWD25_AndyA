@@ -47,6 +47,21 @@ $("nav ul li a").click(function() {
   } else if (hrefName == "#menuLink" && menuToggle == 1) {
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
+
+  // anchor animate for nav
+  } else if (hrefName == "#contactLink") {
+    //attempt 1 - scrolls past bottom of document, takes time to scroll back in
+    $("html, body").animate({
+        scrollTop: document.body.scrollHeight
+      }, 2000);
+    $("#dropdownMenu").slideUp(400);
+    menuToggle = 0;
+  } else {
+    $("html, body").animate({
+        scrollTop: $(hrefName).offset().top 
+      }, 1000);
+    $("#dropdownMenu").slideUp(400);
+    menuToggle = 0;
   };
 }); // #showCode slideToggle, #menuLink slideToggle
 
@@ -91,6 +106,32 @@ $("#dropdownMenu a").click(function() {
 //     hrefCode = 0;
 //   };
 // });
+
+// close #showCode div
+$("#showCode a").click(function() {
+  // event.preventDefault();
+  $("#showCode").slideUp(400);
+  hrefCode = 0;
+  console.log("hide #showCode div");
+});
+
+// hide #dropdownMenu ul on window resize if showing
+$(window).resize(function() {
+  // This will fire each time the window is resized:
+  if ($(window).width() >= 760 && menuToggle == 0) {
+    // if large enough and not opened
+    $("#dropdownMenu").hide();
+    menuToggle = 0;
+  } else if ($(window).width() >= 760 && menuToggle == 1) {
+    // if large enough window and opened
+    $("#dropdownMenu").show();
+    menuToggle = 1;
+  } else {
+    // if smaller
+    $("#dropdownMenu").hide();
+    menuToggle = 0;
+  };
+});
 
 
 }); //close document.ready

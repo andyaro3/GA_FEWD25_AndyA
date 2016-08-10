@@ -14,6 +14,7 @@ Developer @GA in DC
 /* hsla(0, 0%, 0%, 1); /* black */
 /* hsla(0, 0%, 53%, 0.85); /* medium grey */
 /* hsla(360, 100%, 100%, 1); /* white */
+/* hsla(12, 45%, 25%, 1); /* dark rust */
 
 
 
@@ -126,8 +127,13 @@ nav {
     .codeBlue {
       color: hsla(194, 95%, 57%, 0.85); /* aqua blue */;
     }
+    .mediaBigShow {
+      display: none;
+    }
+    .mediaBigHide {
+    }
 #dropdownMenu {
-  width: 60%;
+  width: 200px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
   float: right;
   z-index: 4;
@@ -165,54 +171,119 @@ nav {
       transition-delay: 0s;
     }
 
+@media screen and (min-width: 759px) {
+  .mediaBigShow {
+    display: block;
+  }
+  .mediaBigHide {
+    display: none
+  }
+}
+
 #showCode {
-  height: 60%;
-  width: 70%;
+  /*height: 75%;*/
+  width: 75%;
   background-color: hsla(0, 0%, 0%, 1); /* black */
   color: white;
-  padding: 20px 4px 5px 5px;
+  padding: 5px 5px 5px 5px;
   position: fixed;
-  top: 50px;
+  top: 2.5%;
   right: 2.5%;
-  opacity: .8;
-  z-index: 1;
+  opacity: .9;
+  z-index: 4;
   display: none;
+  border: 1px solid hsla(360, 100%, 100%, 1); /* white */
 }
+  #showCode a { /* #closeShowCode */
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: hsla(360, 100%, 100%, 1); /* white */
+    position: fixed;
+    top: calc(3% + 5px);
+    right: calc(3% + 5px);
+    text-decoration: none;
+    padding-top: 5px;
+    border: 2px solid hsla(360, 100%, 100%, 1); /* white */
+    background-color: hsla(0, 0%, 0%, 0); /* clear */
+    font-weight: bold;
+    /* fade in and out hover transition  for nav a */
+    -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: background-color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: background-color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: background-color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: background-color .33s ease-in;   
+    transition-delay: .1s;
+  }
+    #showCode a:hover { /* #closeShowCode */
+      background-color: hsla(194, 95%, 57%, 1); /* aqua blue */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
 
 .codeBox {
   width: 90%;
-  height: 30%;
-  margin: 1.5% 5% 1.5% 5%;
+  height: 110px;
+  margin: 10px 5% 10px 5%;
   float: left;
   overflow: scroll;
   font-size: 10.5px;
-  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
   }
   /* styling scrollbar within the showCode */
   .codeBox::-webkit-scrollbar {
-    background-color: black;
+    width: 10px;
+    height: 10px;
   }
   .codeBox::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: hsla(12, 45%, 25%, 1); /* dark rust */
   }
   .codeBox::-webkit-scrollbar-thumb {
-      background-color: grey;
-    }
+      background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
+  }
+  .codeBox::-webkit-scrollbar-corner {
+    background-color: hsla(0, 0%, 0%, 1); /* black */
+  }
+
 
 #htmlBox {
-  background-color: red;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
 }
 #cssBox {
-  background-color: blue;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
 }
 #jsBox {
-  background-color: green;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
 }
 
 main { 
-  margin: 200px 0 150px 0;
+  margin: 50px 0 0 0;
   z-index: 0;
+  /* background image styles */
+  background-image: url(../images/Depositphotos_6622713_xl-5.jpg);
+  background-size: cover;
+  height: 700px;
+  /* background video styles <!-- http://mediaboom.com/--> */
+/*  min-width: 1000px;
+  width: 100%;
+  height: auto;*/
 }
+  main h2 {
+    padding: 35px 0 0 15px;
+    text-align: left;
+    color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+    font-family: "Covered By Your Grace";
+    font-size: 40px;
+  }
   main video {
     width: 100%;
     height: auto;
@@ -228,13 +299,17 @@ section {
   width: 100%;
   min-height: 200px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
   section h2 {
     display: block;
     font-family: "Covered By Your Grace";
     font-size: 30px;
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
+  }
+  section p {
+    margin: 0 10% 20px 10%;
+    width: 80%;
   }
 
 .gradient {
@@ -287,12 +362,12 @@ section {
   -o-transition-delay: .1s; 
   transition-delay: .1s;*/
 }
-  @media (min-width: 759px) {
+  @media screen and (min-width: 759px) {
   .innerGallery {
     width: 517px;
   }
 }
-  @media (min-width: 1119px) {
+  @media screen and (min-width: 1119px) {
   .innerGallery {
     width: 773px;
   }
@@ -303,7 +378,7 @@ section {
   height: 250px; /* auto? */
   margin: 2.5px;
   float: left;
-  background-color: blue;
+  background-color: hsla(194, 95%, 57%, 0.85); /* aqua blue */
 /*
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
@@ -312,7 +387,7 @@ section {
   transition-delay: 0s;*/
 }
   .tile:hover {
-    background-color: black;
+    background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
   }
 
 footer {
