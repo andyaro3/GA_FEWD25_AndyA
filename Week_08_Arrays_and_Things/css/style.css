@@ -411,16 +411,31 @@ footer p {
     margin-left: 10%;
     margin: right: 10%;
   }
+  .post h2 {
+    font-size: 28px;
+    color: red;
+  }
+  .post p {
+    font-size: 16px;
+  }
+  .post p:first-of-type:first-letter {
+  font-size: 36px;
+  line-height: 40px;
+  padding-top: 2px;
+  padding-right: 6px;
+  padding-left: 2px;
+  font-weight: 600;
+  }
   img {
     width: 100%;
     height: auto;
   }
   #sidebar h3 {
-    font-size: 26px;
+    font-size: 24px;
     margin-left: 0;
   }
   #sidebar ul li a, #sidebar p {
-    font-size: 22px;
+    font-size: 20px;
   }
   #imgAdUnit {
     border: 2px dotted black;
