@@ -9,15 +9,21 @@ Developer @GA in DC
 /* COLORS
 /*************************************
 /* hsla(94, 53%, 48%, .8); /* sage green */
+/* hsla(94, 25%, 85%, 1); /* light green grey*/
 /* hsla(194, 25%, 85%, 1); /* pale blue grey */
 /* hsla(194, 95%, 57%, 0.85); /* aqua blue */
 /* hsla(0, 0%, 0%, 1); /* black */
 /* hsla(0, 0%, 53%, 0.85); /* medium grey */
 /* hsla(360, 100%, 100%, 1); /* white */
 /* hsla(12, 45%, 25%, 1); /* dark rust */
+/* hsla(0, 0%, 0%, 0); /* transparent */
 
-
-
+/************************************
+/* Media Query Sizes
+/************************************
+/* @media screen and (max-width: 350px) {} 
+/* @media screen and (min-width: 759p) {}
+/* @media screen and (min-width: 1119px) {}
 
 /******************************************
 /* SETUP
@@ -59,7 +65,7 @@ Developer @GA in DC
 /******************************************/
 
 body {
-  background-color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+  background-color: hsla(94, 25%, 85%, 1); /* light green grey*/
   font-family: "Ubuntu";
   text-align: center;
 }
@@ -94,14 +100,14 @@ nav {
     display: block;
     float: right;
     width: 100px;
-    color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+    color: hsla(94, 25%, 85%, 1); /* light green grey*/
     text-decoration: none;
     font-family: "Covered By Your Grace";
-    font-size: 30px;
+    font-size: 30px; 
     padding: 20px 0;
     text-align: center;
     height: 70px;
-    /* fade in and out hover transition  for nav a */
+    /* fade in and out hover transition for nav a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
     -moz-transition: background-color .33s ease-in;   
@@ -114,7 +120,7 @@ nav {
     transition-delay: .1s;
   }
     nav a:hover {
-      background-color: hsla(194, 95%, 57%, 0.85); /* aqua blue */
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -ms-transition-delay: 0s;
@@ -125,7 +131,8 @@ nav {
       margin-right: 7.5px;
     }*/
     .codeBlue {
-      color: hsla(194, 95%, 57%, 0.85); /* aqua blue */;
+      color: hsla(94, 53%, 48%, .8); /* sage green */
+      font-weight: bold;
     }
     .mediaBigShow {
       display: none;
@@ -145,12 +152,12 @@ nav {
     width: 100%;
     height: 50px;
     text-align: right;
-    border-top: .1px solid hsla(194, 25%, 85%, 1); /* pale blue grey */
-    color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+    border-top: .1px solid hsla(94, 25%, 85%, 1); /* light green grey*/
+    color: hsla(94, 25%, 85%, 1); /* light green grey*/
     text-decoration: none;
-    font-size: 30px;
     font-family: "Covered By Your Grace";
-    /* fade in and out hover transition  for nav a */
+    font-size: 30px;
+    /* fade in and out hover transition for nav a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
     -moz-transition: background-color .33s ease-in;   
@@ -163,7 +170,7 @@ nav {
     transition-delay: .1s;
   }
   #dropdownMenu a:hover {
-      background-color: hsla(194, 95%, 57%, 0.85); /* aqua blue */
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -ms-transition-delay: 0s;
@@ -205,9 +212,9 @@ nav {
     text-decoration: none;
     padding-top: 5px;
     border: 2px solid hsla(360, 100%, 100%, 1); /* white */
-    background-color: hsla(0, 0%, 0%, 0); /* clear */
+    background-color: hsla(0, 0%, 0%, 0); /* transparent */
     font-weight: bold;
-    /* fade in and out hover transition  for nav a */
+    /* fade in and out hover transition for nav a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
     -moz-transition: background-color .33s ease-in;   
@@ -220,7 +227,7 @@ nav {
     transition-delay: .1s;
   }
     #showCode a:hover { /* #closeShowCode */
-      background-color: hsla(194, 95%, 57%, 1); /* aqua blue */
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -ms-transition-delay: 0s;
@@ -228,14 +235,15 @@ nav {
       transition-delay: 0s;
     }
 
-
 .codeBox {
   width: 90%;
   height: 110px;
   margin: 10px 5% 10px 5%;
   float: left;
   overflow: scroll;
+  font-family: "Space Mono";
   font-size: 10.5px;
+  line-height: 1.2;
   padding: 10px;
   text-align: left;
   }
@@ -265,30 +273,53 @@ nav {
   background-color: hsla(12, 45%, 25%, 1); /* dark rust */
 }
 
-main { 
+/* background images */
+.background1 {
+  background-image: url("../images/photo-1445299370299-fba06c02df22 - Copy.jpg");
+}
+.background2 {
+  background-image: url("../images/photo-1444858345149-8ff40887589b.jpg");
+}
+.background3 {
+  background-image: url("../images/photo-1461770354136-8f58567b617a.jpg");
+}
+
+main, .backgroundImage { 
   margin: 50px 0 0 0;
   z-index: 0;
   /* background image styles */
-  background-image: url(../images/Depositphotos_6622713_xl-5.jpg);
   background-size: cover;
-  height: 700px;
-  /* background video styles <!-- http://mediaboom.com/--> */
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 500px;
+  /* background video styles <!-- http://mediaboom.com/--> h264 format?*/
 /*  min-width: 1000px;
   width: 100%;
   height: auto;*/
 }
-  main h2 {
-    padding: 35px 0 0 15px;
-    text-align: left;
-    color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+  main h2, .backgroundImage h2 {
+    padding: 250px 0 0 15px;
+    text-align: center;
+    color: hsla(0, 0%, 0%, 1); /* black */
     font-family: "Covered By Your Grace";
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: ;
   }
   main video {
     width: 100%;
     height: auto;
     overflow: hidden;
     margin-top: -150px;
+  }
+  @media screen and (max-width: 350px) {
+    main, .backgroundImage {
+      height: 400px;
+    }
+  }
+  @media screen and (min-width: 759px) {
+    main, .backgroundImage {
+      height: 600px;
+    }
   }
 
 hr {
@@ -334,18 +365,72 @@ section {
     padding: 5px;
   }
 
+.profilePic {
+  background-image: url("../images/11703349_10103898775464568_2357507948393974766_n.jpg");
+  width: 300px;
+  height: 400px;
+  background-size: 531.75px 547.5px; /* X709 x Y720 */
+  background-position: top left;
+  margin: 50px auto;
+}
+
+.profileBio {
+  width: 70%;
+  margin: 0 15% 0 15%;
+  text-align: left;
+  line-height: 1.3;
+}
+  .profileBio:first-letter {
+    font-size: 40px;
+    line-height: .8;
+    float: left;
+    padding: 6px 5px 0 2px;
+  }
+    @media screen and (min-width: 759px) and (max-width: 1118px){
+      .profileBox {
+        width: 100%;
+        height: 500px; /* do based on text length */
+        position: relative;
+      }
+      .profilePic {
+        display: inline-block;
+        position: absolute;
+        left: 10%;
+        top: 50px;
+        margin: 0;
+      }
+      .profileBio {
+        display: inline-block;
+        position: absolute;
+        right: 2%;
+        top: 50px;
+        width: 50%;
+        margin: 0;
+      }
+    }
+    @media screen and (min-width: 1119px) {
+      .profileBox {
+        height: 450px;
+      }
+      .profilePic {
+        float: left;
+        margin-left: 20%;
+      }
+      .profileBio {
+        float: left;
+        width: 50%;
+        float: left;
+        display: inline-block;
+        margin: -455px 20% 0 calc(20% + 300px);
+      }
+    }
+
 .outer {
   width: 70%;
   min-width: 300px;
   text-align: center;
   margin: 0 auto;
 /*  border: 1px solid black;*/
-/*
-  -webkit-transition-delay: .1s; 
-  -moz-transition-delay: .1s; 
-  -ms-transition-delay: .1s; 
-  -o-transition-delay: .1s; 
-  transition-delay: .1s;*/
 }
 
 .innerGallery {
@@ -355,12 +440,6 @@ section {
 /*  border: 1px dashed black;*/
   overflow: hidden;
   margin: auto;
-/*
-  -webkit-transition-delay: .1s; 
-  -moz-transition-delay: .1s; 
-  -ms-transition-delay: .1s; 
-  -o-transition-delay: .1s; 
-  transition-delay: .1s;*/
 }
   @media screen and (min-width: 759px) {
   .innerGallery {
@@ -378,23 +457,33 @@ section {
   height: 250px; /* auto? */
   margin: 2.5px;
   float: left;
-  background-color: hsla(194, 95%, 57%, 0.85); /* aqua blue */
-/*
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  -ms-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s;*/
+  background-color: hsla(94, 53%, 48%, .8); /* sage green */
+  /* fade in and out hover transition for div */
+  -webkit-transition: background-color .33s ease-in;   
+  -webkit-transition-delay: .1s; 
+  -moz-transition: background-color .33s ease-in;   
+  -moz-transition-delay: .1s; 
+  -ms-transition: background-color .33s ease-in;   
+  -ms-transition-delay: .1s; 
+  -o-transition: background-color .33s ease-in;   
+  -o-transition-delay: .1s; 
+  transition: background-color .33s ease-in;   
+  transition-delay: .1s;
 }
   .tile:hover {
-    background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
+    background-color: hsla(0, 0%, 0%, 1); /* black */
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
   }
 
 footer {
   width: 100%;
   height: 275px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
-  color: hsla(194, 25%, 85%, 1); /* pale blue grey */
+  color: hsla(94, 25%, 85%, 1); /* light green grey*/
   box-shadow: 0 -5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
 }
   footer h2 {
@@ -414,13 +503,38 @@ footer {
 .socialIcon {
   height: 50px;
   width: 50px;
+  color: hsla(0, 0%, 0%, 0); /* transparent */;
 }
 
-#facebook {
+.facebook {
+  background-image: url("../images/vector-free-social-media-icons.jpg"); 
+  background-size: 933.3333px 653.3333px ;
+  background-position: -707px -230px;
 }
+  .facebook:hover {
+    background-image: url("../images/vector-free-social-media-icons.jpg"); 
+    background-size: 933.3333px 653.3333px ;
+    background-position: -707px -439.5px;
+  }
 
-#linkedIn{
+.linkedIn {
+  background-image: url("../images/vector-free-social-media-icons.jpg"); 
+  background-size: 933.3333px 653.3333px ;
+  background-position: -554px -300px;
 }
+  .linkedIn:hover {
+    background-image: url("../images/vector-free-social-media-icons.jpg"); 
+    background-size: 933.3333px 653.3333px ;
+    background-position: -554px -510px;
+  }
 
-#gitHub {
+.gitHub {
+  background-image: url("../images/vector-free-social-media-icons.jpg"); 
+  background-size: 933.3333px 653.3333px ;
+  background-position: -783.5px -230px;
 }
+  .gitHub:hover {
+    background-image: url("../images/vector-free-social-media-icons.jpg"); 
+    background-size: 933.3333px 653.3333px ;
+    background-position: -783.5px -439px;
+  }

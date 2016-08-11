@@ -18,27 +18,27 @@ $(document).ready(function() {
 // anchor animate, #showCode slideToggle, #menuLink slideToggle
 var hrefFull;
 var hrefName;
-var hrefCode = 0;
+var hrefCodeToggle = 0;
 var menuToggle = 0;
 var htmlPageCode =  $("html").html();
-var cssPageCode =  $("css").html();
-var jsPageCode =  $("js").html();
+// var cssPageCode =  $("css").html();
+// var jsPageCode =  $("js").html();
 
 $("nav ul li a").click(function() {
   event.preventDefault();
-  hrefFull = event.target.href;
-  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
+  hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
+  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
 
   // #showCode slideToggle
-  if (hrefName == "#showCode" && hrefCode == 0) {
+  if (hrefName == "#showCode" && hrefCodeToggle == 0) {
     $("#showCode").slideDown(400);
-    hrefCode = 1;
-    $("#htmlCode").text(htmlPageCode);
-    $("#cssCode").text(cssPageCode);
-    $("#jsCode").text(jsPageCode);
-  } else if (hrefName == "#showCode" && hrefCode == 1) {
+    hrefCodeToggle = 1;
+    $("#htmlCode").text(htmlPageCode); // pull/show HTML code for page
+    // $("#cssCode").text(cssPageCode); // pull/show CSS code? doc
+    // $("#jsCode").text(jsPageCode); // pull/show JS code? doc
+  } else if (hrefName == "#showCode" && hrefCodeToggle == 1) {
     $("#showCode").slideUp(400);
-    hrefCode = 0;
+    hrefCodeToggle = 0;
 
   // #menuLink slideToggle
   } else if (hrefName == "#menuLink" && menuToggle == 0) {
@@ -48,24 +48,24 @@ $("nav ul li a").click(function() {
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
 
-  // anchor animate for nav
+  // anchor animate for full nav
   } else if (hrefName == "#contactLink") {
     //attempt 1 - scrolls past bottom of document, takes time to scroll back in
     $("html, body").animate({
-        scrollTop: document.body.scrollHeight
+        scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
       }, 2000);
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
   } else {
     $("html, body").animate({
-        scrollTop: $(hrefName).offset().top 
+        scrollTop: $(hrefName).offset().top // calculates difference and goes there on the page
       }, 1000);
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
   };
 }); // #showCode slideToggle, #menuLink slideToggle
 
-  // anchor animate for #downdownMenu
+  // anchor animate for within the #downdownMenu
 $("#dropdownMenu a").click(function() {
   event.preventDefault();
   hrefFull = event.target.href;
@@ -74,14 +74,14 @@ $("#dropdownMenu a").click(function() {
   if (hrefName == "#contactLink") {
     //attempt 1 - scrolls past bottom of document, takes time to scroll back in
     $("html, body").animate({
-        scrollTop: document.body.scrollHeight
+        scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
       }, 2000);
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
   // all other scroll
   } else {
     $("html, body").animate({
-        scrollTop: $(hrefName).offset().top 
+        scrollTop: $(hrefName).offset().top // calculates difference and goes there on the page
       }, 1000);
     $("#dropdownMenu").slideUp(400);
     menuToggle = 0;
@@ -109,25 +109,24 @@ $("#dropdownMenu a").click(function() {
 
 // close #showCode div
 $("#showCode a").click(function() {
-  // event.preventDefault();
+  event.preventDefault();
   $("#showCode").slideUp(400);
-  hrefCode = 0;
-  console.log("hide #showCode div");
+  hrefCodeToggle = 0;
 });
 
 // hide #dropdownMenu ul on window resize if showing
 $(window).resize(function() {
   // This will fire each time the window is resized:
   if ($(window).width() >= 760 && menuToggle == 0) {
-    // if large enough and not opened
+    // if large enough and not opened, keep closed
     $("#dropdownMenu").hide();
     menuToggle = 0;
   } else if ($(window).width() >= 760 && menuToggle == 1) {
-    // if large enough window and opened
+    // if large enough window and opened, keep open
     $("#dropdownMenu").show();
     menuToggle = 1;
   } else {
-    // if smaller
+    // if smaller and opened, close
     $("#dropdownMenu").hide();
     menuToggle = 0;
   };
