@@ -55,6 +55,7 @@ $("nav ul li a").click(function() {
         scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
       }, 2000);
     $("#dropdownMenu").slideUp(400);
+    console.log("#dropdownMenu #contactLink");
     menuToggle = 0;
   } else {
     $("html, body").animate({
@@ -65,7 +66,6 @@ $("nav ul li a").click(function() {
   };
 }); // #showCode slideToggle, #menuLink slideToggle
 
-  // anchor animate for within the #downdownMenu
 $("#dropdownMenu a").click(function() {
   event.preventDefault();
   hrefFull = event.target.href;
@@ -77,8 +77,8 @@ $("#dropdownMenu a").click(function() {
         scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
       }, 2000);
     $("#dropdownMenu").slideUp(400);
+    console.log("#dropdownMenu #contactLink");
     menuToggle = 0;
-  // all other scroll
   } else {
     $("html, body").animate({
         scrollTop: $(hrefName).offset().top // calculates difference and goes there on the page

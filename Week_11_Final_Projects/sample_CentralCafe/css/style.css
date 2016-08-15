@@ -1,0 +1,197 @@
+/*
+Project Name: Sample Business Site, Central Café
+Client: FEWD25, Final Project
+Author: Andy Aronoff
+Developer @GA in DC
+*/
+
+/******************************************
+/* Colors
+/*******************************************
+/*  hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+/*
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image 
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image 
+}*/
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.blackBrownBand {
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  color: white;
+  display: block;
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  /*added by Andy*/
+  width: 100%;
+  background-color: hsla(0, 3%, 94%, 1); /*background color*/
+}
+
+header {
+  display: ;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+/*  position: absolute;
+  width: 100%;*/
+}
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 12.5px;
+  right: 12.5px;
+  z-index: 10;
+}
+  .hamburger:hover {
+    background-color: hsla(360, 100%, 100%, 0.7); /* transparent white */
+  }
+
+.hamburger p { /* creating the 3 lines */
+  font-family: "Arial";
+  font-size: 38px;
+  line-height: .25;
+  margin-top: -9.5px;
+}
+
+nav {
+  position: fixed;
+  top: 75px;
+  right: 0;
+}
+
+nav li a {
+  display: block;
+  width: 250px;
+  height: 50px;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  border-top: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  color: white;
+  font-family: "Arial";
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 12.5px 0 0 25px;
+  text-decoration: none;
+ }
+ nav li a:hover {
+  background-color: hsla(360, 100%, 100%, 0.9); /* transparent white */
+  color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+ }
+
+/* different pages, #id by section */
+section {
+  position: absolute;
+  z-index: -1;
+}
+#homepage {
+  display: ;
+}
+#ourStory {
+  display: none;
+}
+#menu {
+  display: ;
+}
+#shop {
+  display: ;
+}
+#contact {
+  display: ;
+}
+
+.paralax {
+  width: 100%;
+  height: 400px;
+}
+  .paralax h2 {
+    font-size: 50px;
+    font-family: "Damion";
+    text-align: center;
+    padding-top: 100px;
+  }
+  .background1 {
+    background-image: url("../images/photo-1470985166016-a7d53763cee7.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background2 {
+    background-image: url("../images/photo-1432107294469-414527cb5c65.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+
+@media screen and (min-width: 700px) {
+  .paralax {
+    height: 600px;
+  }
+}
+
+.newPage {
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+}
+  .newPage h3 {
+    margin-left: 10%;
+    font-size: 50px;
+    font-family: "Damion";
+  }
+  .newPage p {
+    margin: 0 10%;
+  }
+
+.foot {
+  width: 100%;
+  height: 200px;
+  padding-top: 60px;
+  text-align: center;
+  background: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */ /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(hsla(11, 100%, 4%, 1), hsla(11, 100%, 4%, .9), hsla(11, 100%, 4%, .7), hsla(11, 100%, 4%, .5)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(hsla(11, 100%, 4%, 1), hsla(11, 100%, 4%, .9), hsla(11, 100%, 4%, .7), hsla(11, 100%, 4%, .5)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(hsla(11, 100%, 4%, 1), hsla(11, 100%, 4%, .9), hsla(11, 100%, 4%, .7), hsla(11, 100%, 4%, .5)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(hsla(11, 100%, 4%, 1), hsla(11, 100%, 4%, .9), hsla(11, 100%, 4%, .7), hsla(11, 100%, 4%, .5)); /* Standard syntax */
+}

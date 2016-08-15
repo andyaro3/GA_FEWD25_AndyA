@@ -66,7 +66,9 @@ Developer @GA in DC
 
 body {
   background-color: hsla(94, 25%, 85%, 1); /* light green grey*/
-  font-family: "Ubuntu";
+  font-family: "Open Sans Condensed";
+  line-height: 1.4;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -76,7 +78,7 @@ header {
   position: fixed;
   top: 0;
   height: 70px;
-  box-shadow: 0 5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
+  box-shadow: 0 5px 10px hsla(0, 0%, 10%, 0.8); 
   z-index: 2;
 }
   header h1 {
@@ -102,8 +104,9 @@ nav {
     width: 100px;
     color: hsla(94, 25%, 85%, 1); /* light green grey*/
     text-decoration: none;
-    font-family: "Covered By Your Grace";
-    font-size: 30px; 
+    font-family: "Open Sans Condensed";
+    font-size: 26px;
+    line-height: 1.1;
     padding: 20px 0;
     text-align: center;
     height: 70px;
@@ -127,9 +130,6 @@ nav {
       -o-transition-delay: 0s;
       transition-delay: 0s;
     }
-/*    nav:last-child li {
-      margin-right: 7.5px;
-    }*/
     .codeBlue {
       color: hsla(94, 53%, 48%, .8); /* sage green */
       font-weight: bold;
@@ -139,6 +139,7 @@ nav {
     }
     .mediaBigHide {
     }
+
 #dropdownMenu {
   width: 200px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
@@ -150,13 +151,14 @@ nav {
     display: block;
     padding: 10px 25px 1px 0;
     width: 100%;
-    height: 50px;
+    height: 55px;
     text-align: right;
     border-top: .1px solid hsla(94, 25%, 85%, 1); /* light green grey*/
     color: hsla(94, 25%, 85%, 1); /* light green grey*/
     text-decoration: none;
-    font-family: "Covered By Your Grace";
-    font-size: 30px;
+    font-family: "Open Sans Condensed";
+    font-size: 26px;
+    line-height: 1.3;
     /* fade in and out hover transition for nav a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
@@ -177,15 +179,14 @@ nav {
       -o-transition-delay: 0s;
       transition-delay: 0s;
     }
-
-@media screen and (min-width: 759px) {
-  .mediaBigShow {
-    display: block;
-  }
-  .mediaBigHide {
-    display: none
-  }
-}
+    @media screen and (min-width: 759px) {
+      .mediaBigShow {
+        display: block;
+      }
+      .mediaBigHide {
+        display: none
+      }
+    }
 
 #showCode {
   /*height: 75%;*/
@@ -213,7 +214,8 @@ nav {
     padding-top: 5px;
     border: 2px solid hsla(360, 100%, 100%, 1); /* white */
     background-color: hsla(0, 0%, 0%, 0); /* transparent */
-    font-weight: bold;
+    font-family: "Arial";
+    line-height: .9;
     /* fade in and out hover transition for nav a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
@@ -275,17 +277,17 @@ nav {
 
 /* background images */
 .background1 {
-  background-image: url("../images/photo-1445299370299-fba06c02df22 - Copy.jpg");
+  background-image: url("../images/background1_mod.jpg");
 }
 .background2 {
-  background-image: url("../images/photo-1444858345149-8ff40887589b.jpg");
+  background-image: url("../images/background2.jpg");
 }
 .background3 {
-  background-image: url("../images/photo-1461770354136-8f58567b617a.jpg");
+  background-image: url("../images/photo-1446080501695-8e929f879f2b.jpg");
 }
 
 main, .backgroundImage { 
-  margin: 50px 0 0 0;
+  margin: 70px 0 0 0;
   z-index: 0;
   /* background image styles */
   background-size: cover;
@@ -298,12 +300,11 @@ main, .backgroundImage {
   height: auto;*/
 }
   main h2, .backgroundImage h2 {
-    padding: 250px 0 0 15px;
+    padding: 235px 0 0 15px;
     text-align: center;
-    color: hsla(0, 0%, 0%, 1); /* black */
-    font-family: "Covered By Your Grace";
-    font-size: 50px;
-    font-weight: ;
+    color: hsla(360, 100%, 100%, 1); /* white */
+    font-family: "Fredericka the Great";
+    font-size: 46px;
   }
   main video {
     width: 100%;
@@ -320,6 +321,9 @@ main, .backgroundImage {
     main, .backgroundImage {
       height: 600px;
     }
+    main h2, .backgroundImage h2 {
+      padding-top: 280px;
+    }
   }
 
 hr {
@@ -334,9 +338,9 @@ section {
 }
   section h2 {
     display: block;
-    font-family: "Covered By Your Grace";
-    font-size: 30px;
-    padding: 60px 0 40px 0;
+    padding: 50px 0 40px 0;
+    font-family: "Vidaloka";
+    font-size: 40px;
   }
   section p {
     margin: 0 10% 20px 10%;
@@ -362,7 +366,7 @@ section {
   border: none;
 }
   .iceBreaker td {
-    padding: 5px;
+    padding: 1px 2.5px 1px 12.5px;
   }
 
 .profilePic {
@@ -378,10 +382,9 @@ section {
   width: 70%;
   margin: 0 15% 0 15%;
   text-align: left;
-  line-height: 1.3;
 }
   .profileBio:first-letter {
-    font-size: 40px;
+    font-size: 56px;
     line-height: .8;
     float: left;
     padding: 6px 5px 0 2px;
@@ -389,7 +392,7 @@ section {
     @media screen and (min-width: 759px) and (max-width: 1118px){
       .profileBox {
         width: 100%;
-        height: 500px; /* do based on text length */
+        height: 450px; /* do based on text length */
         position: relative;
       }
       .profilePic {
@@ -430,32 +433,30 @@ section {
   min-width: 300px;
   text-align: center;
   margin: 0 auto;
-/*  border: 1px solid black;*/
 }
 
 .innerGallery {
-  width: 261px;
+  width: 270px;
   text-align: center;
   padding: 2.5px;
-/*  border: 1px dashed black;*/
   overflow: hidden;
   margin: auto;
 }
-  @media screen and (min-width: 759px) {
+  @media screen and (min-width: 759px) { 
   .innerGallery {
-    width: 517px;
+    width: 525px;
   }
 }
   @media screen and (min-width: 1119px) {
   .innerGallery {
-    width: 773px;
+    width: 785px;
   }
 }
 
 .tile {
   width: 250px;
-  height: 250px; /* auto? */
-  margin: 2.5px;
+  height: 250px; 
+  margin: 5px;
   float: left;
   background-color: hsla(94, 53%, 48%, .8); /* sage green */
   /* fade in and out hover transition for div */
@@ -481,60 +482,86 @@ section {
 
 footer {
   width: 100%;
-  height: 275px;
+  height: 330px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
   color: hsla(94, 25%, 85%, 1); /* light green grey*/
-  box-shadow: 0 -5px 10px hsla(0, 0%, 53%, 0.85); /* medium grey */
+  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.8); 
 }
   footer h2 {
     display: block;
-    font-family: "Covered By Your Grace";
-    font-size: 30px;
-    padding: 40px 0;
-  }
-  footer li {
-    display: inline-block;
-    margin: 0 5px 0 0;
+    font-family: "Vidaloka";
+    font-size: 40px;
+    padding: 50px 0 40px 0;
   }
   footer ul {
     margin-bottom: 40px;
+  }
+  footer li {
+    display: inline-block;
+    margin: 0 10px 0 0;
   }
 
 .socialIcon {
   height: 50px;
   width: 50px;
-  color: hsla(0, 0%, 0%, 0); /* transparent */;
+  color: hsla(0, 0%, 0%, 0); /* transparent ; */
 }
-
 .facebook {
-  background-image: url("../images/vector-free-social-media-icons.jpg"); 
-  background-size: 933.3333px 653.3333px ;
-  background-position: -707px -230px;
+  background-image: url("../images/AA-social-icons-sage.png"); 
+  background-size: 103px 103px;
+  background-position: 50px 0px;
+  background-color: hsla(0, 0%, 0%, 0); /* transparent */
+  /* fade in and out hover transition for icon */
+  -webkit-transition: background-color .33s ease-in;   
+  -webkit-transition-delay: .1s; 
+  -moz-transition: background-color .33s ease-in;   
+  -moz-transition-delay: .1s; 
+  -ms-transition: background-color .33s ease-in;   
+  -ms-transition-delay: .1s; 
+  -o-transition: background-color .33s ease-in;   
+  -o-transition-delay: .1s; 
+  transition: background-color .33s ease-in;   
+  transition-delay: .1s;
 }
-  .facebook:hover {
-    background-image: url("../images/vector-free-social-media-icons.jpg"); 
-    background-size: 933.3333px 653.3333px ;
-    background-position: -707px -439.5px;
-  }
-
 .linkedIn {
-  background-image: url("../images/vector-free-social-media-icons.jpg"); 
-  background-size: 933.3333px 653.3333px ;
-  background-position: -554px -300px;
+  background-image: url("../images/AA-social-icons-sage.png"); 
+  background-size: 103px 103px;
+  background-position: 0px 0px;
+  background-color: hsla(0, 0%, 0%, 0); /* transparent */
+  /* fade in and out hover transition for icon */
+  -webkit-transition: background-color .33s ease-in;   
+  -webkit-transition-delay: .1s; 
+  -moz-transition: background-color .33s ease-in;   
+  -moz-transition-delay: .1s; 
+  -ms-transition: background-color .33s ease-in;   
+  -ms-transition-delay: .1s; 
+  -o-transition: background-color .33s ease-in;   
+  -o-transition-delay: .1s; 
+  transition: background-color .33s ease-in;   
+  transition-delay: .1s;
 }
-  .linkedIn:hover {
-    background-image: url("../images/vector-free-social-media-icons.jpg"); 
-    background-size: 933.3333px 653.3333px ;
-    background-position: -554px -510px;
-  }
-
 .gitHub {
-  background-image: url("../images/vector-free-social-media-icons.jpg"); 
-  background-size: 933.3333px 653.3333px ;
-  background-position: -783.5px -230px;
+  background-image: url("../images/AA-social-icons-sage.png"); 
+  background-size: 147px 133px;
+  background-position: -11.5px 65px;
+  background-color: hsla(0, 0%, 0%, 0); /* transparent */
+  /* fade in and out hover transition for icon */
+  -webkit-transition: background-color .33s ease-in;   
+  -webkit-transition-delay: .1s; 
+  -moz-transition: background-color .33s ease-in;   
+  -moz-transition-delay: .1s; 
+  -ms-transition: background-color .33s ease-in;   
+  -ms-transition-delay: .1s; 
+  -o-transition: background-color .33s ease-in;   
+  -o-transition-delay: .1s; 
+  transition: background-color .33s ease-in;   
+  transition-delay: .1s;
 }
-  .gitHub:hover {
-    background-image: url("../images/vector-free-social-media-icons.jpg"); 
-    background-size: 933.3333px 653.3333px ;
-    background-position: -783.5px -439px;
+  .facebook:hover, .linkedIn:hover, .gitHub:hover {
+    background-color: hsla(94, 53%, 48%, .8); /* sage green */
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
   }
