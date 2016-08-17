@@ -277,13 +277,13 @@ nav {
 
 /* background images */
 .background1 {
-  background-image: url("../images/background1_mod.jpg");
+  background-image: url("../images/background1_mobile.png");
 }
 .background2 {
-  background-image: url("../images/background2.jpg");
+  background-image: url("../images/background2_mobile.png");
 }
 .background3 {
-  background-image: url("../images/photo-1446080501695-8e929f879f2b.jpg");
+  background-image: url("../images/background3_mobile.png");
 }
 
 main, .backgroundImage { 

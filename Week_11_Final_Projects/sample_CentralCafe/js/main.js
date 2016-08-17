@@ -20,7 +20,7 @@ $("nav ul li a").hover(function() {
 $(".hamburger").hover(function() {
   $(this).css({"background-color":"white", "color":"hsla(11, 100%, 4%, 1)", "font-weight":"bold", "border-color":"hsla(11, 100%, 4%, 1)"});
     }, function() {
-      $(this).css({"background-color":"hsla(11, 100%, 4%, 1)", "color":"white", "font-weight":"normal", "border-color":"white"});
+      $(this).css({"background-color":"hsla(360, 100%, 100%, 0)", "color":"white", "font-weight":"normal", "border-color":"white"});
 });
 
 // hamburger dropdown toggle
