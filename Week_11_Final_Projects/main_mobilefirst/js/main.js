@@ -15,6 +15,10 @@ $(document).ready(function() {
 //   }
 // };
 
+// http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
+// var cssPageCode = $.when($.get("css/style.css").html());
+// alert("My CSS = " + cssPageCode);
+
 // anchor animate, #showCode slideToggle, #menuLink slideToggle
 var hrefFull;
 var hrefName;

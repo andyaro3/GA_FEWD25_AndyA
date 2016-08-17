@@ -78,7 +78,7 @@ header {
   position: fixed;
   top: 0;
   height: 70px;
-  box-shadow: 0 5px 10px hsla(0, 0%, 10%, 0.8); 
+  box-shadow: 0 5px 10px hsla(0, 0%, 10%, 0.9); 
   z-index: 2;
 }
   header h1 {
@@ -244,7 +244,7 @@ nav {
   float: left;
   overflow: scroll;
   font-family: "Space Mono";
-  font-size: 10.5px;
+  font-size: 11px;
   line-height: 1.2;
   padding: 10px;
   text-align: left;
@@ -294,6 +294,7 @@ main, .backgroundImage {
   background-repeat: no-repeat;
   background-position: top center;
   height: 500px;
+  box-shadow: 0 5.5px 10px hsla(0, 0%, 10%, 0.8), 0 -5.5px 10px hsla(0, 0%, 10%, 0.8); /* bottom, top shadow */
   /* background video styles <!-- http://mediaboom.com/--> h264 format?*/
 /*  min-width: 1000px;
   width: 100%;
@@ -485,7 +486,7 @@ footer {
   height: 330px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
   color: hsla(94, 25%, 85%, 1); /* light green grey*/
-  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.8); 
+  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.9); 
 }
   footer h2 {
     display: block;
@@ -502,63 +503,31 @@ footer {
   }
 
 .socialIcon {
+  display: block;
   height: 50px;
   width: 50px;
-  color: hsla(0, 0%, 0%, 0); /* transparent ; */
-}
-.facebook {
-  background-image: url("../images/AA-social-icons-sage.png"); 
+  padding-top: 2.5px;
   background-size: 103px 103px;
   background-position: 50px 0px;
-  background-color: hsla(0, 0%, 0%, 0); /* transparent */
+  background-color: hsla(360, 100%, 100%, 1); /* white */
+  color: hsla(0, 0%, 0%, 1); /* black */
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
   /* fade in and out hover transition for icon */
-  -webkit-transition: background-color .33s ease-in;   
+  -webkit-transition: color .33s ease-in;   
   -webkit-transition-delay: .1s; 
-  -moz-transition: background-color .33s ease-in;   
+  -moz-transition: color .33s ease-in;   
   -moz-transition-delay: .1s; 
-  -ms-transition: background-color .33s ease-in;   
+  -ms-transition: color .33s ease-in;   
   -ms-transition-delay: .1s; 
-  -o-transition: background-color .33s ease-in;   
+  -o-transition: color .33s ease-in;   
   -o-transition-delay: .1s; 
-  transition: background-color .33s ease-in;   
+  transition: color .33s ease-in;   
   transition-delay: .1s;
 }
-.linkedIn {
-  background-image: url("../images/AA-social-icons-sage.png"); 
-  background-size: 103px 103px;
-  background-position: 0px 0px;
-  background-color: hsla(0, 0%, 0%, 0); /* transparent */
-  /* fade in and out hover transition for icon */
-  -webkit-transition: background-color .33s ease-in;   
-  -webkit-transition-delay: .1s; 
-  -moz-transition: background-color .33s ease-in;   
-  -moz-transition-delay: .1s; 
-  -ms-transition: background-color .33s ease-in;   
-  -ms-transition-delay: .1s; 
-  -o-transition: background-color .33s ease-in;   
-  -o-transition-delay: .1s; 
-  transition: background-color .33s ease-in;   
-  transition-delay: .1s;
-}
-.gitHub {
-  background-image: url("../images/AA-social-icons-sage.png"); 
-  background-size: 147px 133px;
-  background-position: -11.5px 65px;
-  background-color: hsla(0, 0%, 0%, 0); /* transparent */
-  /* fade in and out hover transition for icon */
-  -webkit-transition: background-color .33s ease-in;   
-  -webkit-transition-delay: .1s; 
-  -moz-transition: background-color .33s ease-in;   
-  -moz-transition-delay: .1s; 
-  -ms-transition: background-color .33s ease-in;   
-  -ms-transition-delay: .1s; 
-  -o-transition: background-color .33s ease-in;   
-  -o-transition-delay: .1s; 
-  transition: background-color .33s ease-in;   
-  transition-delay: .1s;
-}
-  .facebook:hover, .linkedIn:hover, .gitHub:hover {
-    background-color: hsla(94, 53%, 48%, .8); /* sage green */
+  .socialIcon:hover {
+    color: hsla(94, 53%, 48%, .8); /* sage green */
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -ms-transition-delay: 0s;

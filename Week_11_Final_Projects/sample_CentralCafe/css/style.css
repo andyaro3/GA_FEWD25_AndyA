@@ -78,17 +78,17 @@ header {
   width: 50px;
   height: 50px;
   border: 3px solid white;
-  background-color: transparent;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
   text-align: center;
   border-radius: 5px;
   position: fixed;
-  top: 12.5px;
+  top: 11.5px;
   right: 12.5px;
   z-index: 10;
 }
-  .hamburger:hover {
+/*  .hamburger:hover {
     background-color: hsla(360, 100%, 100%, 0.7); /* transparent white */
-  }
+/*  }*/
 
 .hamburger p { /* creating the 3 lines */
   font-family: "Arial";
@@ -99,16 +99,20 @@ header {
 
 nav {
   position: fixed;
-  top: 75px;
+  top: 0;
   right: 0;
+  width: 0;
+  opacity: .95;
+  /*box-shadow: -7px 7px 10px black;*/
 }
 
 nav li a {
   display: block;
-  width: 250px;
+  width: 251px;
   height: 50px;
   background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
-  border-top: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  border-bottom: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
   color: white;
   font-family: "Arial";
   font-size: 20px;
@@ -116,10 +120,20 @@ nav li a {
   padding: 12.5px 0 0 25px;
   text-decoration: none;
  }
- nav li a:hover {
-  background-color: hsla(360, 100%, 100%, 0.9); /* transparent white */
-  color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
- }
+
+.firstNav {
+  display: block;
+  width: 251px;
+  height: 75px;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  padding: 25px 0 0 25px;
+  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  /*border-bottom: 1px dotted hsla(360, 100%, 100%, 0.7);*/ /* transparent white */
+}
+
+.lastNav {
+  border-radius: 0 0 0 10px; /* top-left, top-right, bottom-right, bottom-left */
+}
 
 /* different pages, #id by section */
 section {
@@ -127,19 +141,19 @@ section {
   z-index: -1;
 }
 #homepage {
-  display: ;
+  display: none;
 }
 #ourStory {
   display: none;
 }
 #menu {
-  display: ;
+  display: none;
 }
 #shop {
-  display: ;
+  display: none;
 }
 #contact {
-  display: ;
+  display: none;
 }
 
 .paralax {
@@ -160,6 +174,24 @@ section {
   }
   .background2 {
     background-image: url("../images/photo-1432107294469-414527cb5c65.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background3 {
+    background-image: url("../images/photo-1468418143278-41595b1a4c89.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background4 {
+    background-image: url("../images/photo-1414808549009-35951c724e9f.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background5 {
+    background-image: url("../images/photo-1461963040894-7ee721035376.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
