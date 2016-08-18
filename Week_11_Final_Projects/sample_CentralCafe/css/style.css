@@ -69,7 +69,7 @@ Developer @GA in DC
 body {
   color: white;
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
   font-family: "Roboto", sans-serif;
   /*added by Andy*/
@@ -77,10 +77,31 @@ body {
   background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   display: ;
 /*  position: absolute;
   width: 100%;*/
+}
+
+#codepen {
+  font-family: "Open Sans Condensed";
+  font-size: 26px;
+  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 150px;
+  height: 75px;
+  width: 100px;
+  padding: 14px 5px 0 0;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .hamburger {
@@ -176,31 +197,31 @@ section {
     padding-top: 100px;
   }
   .background1 {
-    background-image: url("../images/coffeeshop1_mobile.png");
+    background-image: url("https://hd.unsplash.com/photo-1470985166016-a7d53763cee7");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
   .background2 {
-    background-image: url("../images/coffeeshop2_mobile.png");
+    background-image: url("https://hd.unsplash.com/photo-1432107294469-414527cb5c65");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
   .background3 {
-    background-image: url("../images/coffeeshop3_mobile.png");
+    background-image: url("https://hd.unsplash.com/photo-1468418143278-41595b1a4c89");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
   .background4 {
-    background-image: url("../images/coffeeshop4_mobile.png");
+    background-image: url("https://hd.unsplash.com/photo-1441757801704-6a71cffed732");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
   .background5 {
-    background-image: url("../images/coffeeshop5_mobile.png");
+    background-image: url("https://hd.unsplash.com/photo-1461963040894-7ee721035376");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -228,14 +249,60 @@ section {
     margin-left: 10%;
     font-size: 50px;
     font-family: "Damion";
+    display: block;
+    width: 90%;
   }
   .newPage p {
     margin: 0 10%;
   }
+  .newPage h4 {
+    color: gold;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
 
 .homepageContent {}
+  .homepageContent img {
+    width: 200px;
+    height: auto;
+    float: right;
+    margin-right: 10%;
+    padding: 5px 0 20px 20px;
+  }
+  .homepageHamburger {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 5px;
+    background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+    margin-left: 10%;
+    float: left;
+  }
+  .homepageHamburger p { /* creating the 3 lines */
+    font-family: "Arial";
+    font-size: 38px;
+    line-height: .25;
+    margin-top: -9.5px;
+  }
+  .homepageFirstNav {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 25px;
+    margin-left: 20px;
+    font-weight: thin;
+    font-style: italic;
+    color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+  }
 
 .ourStoryContent {}
+  .ourStoryContent img {
+    width: 200px;
+    height: auto;
+    float: left;
+    padding: 5px 20px 15px 0;
+  }
 
 .menuContent {}
   .menuMain {
@@ -252,11 +319,6 @@ section {
     padding-left: 0;
     display: inline;
   }
-    .menuGroup h4 {
-      color: gold;
-      font-size: 1.5rem;
-      font-style: italic;
-    }
     .menuGroup li {
       margin-left: 5%;
       font-family: "Roboto Condensed";
@@ -268,8 +330,15 @@ section {
   .menuGroup:nth-Child(3) {
     clear: both; /* clearfix float */
   }
+  .homepageFirstNav {
+    margin-top: 10px;
+  }
 }
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1000px) {
+  .menuGroup li {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1300px) {
   .menuGroup:nth-Child(3) {
     clear: none; /* undo clearfix float, allow float */
@@ -283,6 +352,19 @@ section {
 .shopContent {}
 
 .contactContent {}
+  .contactGroup {
+    margin-left: 10%;
+  }
+  .contactContent li {
+    margin-left: 5%;
+    font-family: "Roboto Condensed";
+    width: 350px;
+    overflow: none;
+  }
+  .contactContent a {
+    text-decoration: none;
+    color: white;
+  }
 
 .foot {
   width: 100%;
@@ -290,3 +372,14 @@ section {
   padding-top: 60px;
   text-align: center;
 }
+  .foot h4 {
+    font-family: "Damion";
+    font-size: 22px;
+  }
+  .foot img {
+    margin: 20px 20px 20px 20px;
+  }
+  .foot p {
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+  }
