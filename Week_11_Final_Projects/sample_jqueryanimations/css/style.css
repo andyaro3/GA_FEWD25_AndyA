@@ -1,0 +1,42 @@
+/*
+Project Name: jQuery Animations
+Client: FEWD25, Final Project
+Author: Andy Aronoff
+Developer @GA in DC
+*/
+
+/******************************************
+/* Colors
+/*******************************************
+/*  hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+/*  hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+/*  hsla(360, 100%, 100%, 0.7); /* transparent white */
+/*  hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+
+/******************************************
+/* @Media Queries
+/*******************************************
+/*  @media screen and (min-width: 700px) {}
+/*  @media screen and (min-width: 1000px) {}
+/*  @media screen and (min-width: 1300px) {}
+
+*/
+
+header {
+  height: 30px;
+  width: 100%;
+}
+
+#codeItem {
+}
+
+#codepen {
+  margin-left: 30px;
+  font-size: 30px;
+  border: 2px dotted red;
+  padding: 30px;
+  background-color: lightgrey;
+  color: red;
+  width: 150px;
+  height: 150px;
+}
