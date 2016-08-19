@@ -8,40 +8,22 @@ $(document).ready(function() {
 
 // on doc ready, fade in homepage
 $("#homepage").fadeIn(3000);
+console.log("page fade in");
 
-// Codepen hover color change
-// $('#codeItem').hover(function() {
-//   $('#codepen').animate({color:'red', backgroundColor:'hsla(360, 100%, 100%, 0.33)'}, 'slow');
-// }, function() {
-//   $('#codepen').animate({color:'white', backgroundColor:'hsla(11, 100%, 4%, 1)'}, 'slow');
-//   console.log('hovered Codepen');
-// });
-// example1 works for width, but not color...
-$("#codeItem").hover(function(){
-    $("#codepen").animate({ width: "700px" }, "slow");
-}, function() {
-    $("#codepen").animate({ width: "100px" }, "slow");
-});
-// exact same as code above but doesn't change color...
-$("#codeItem").hover(function(){
-    $("#codepen").animate({ backgroundColor: "red" });
-}, function() {
-    $("#codepen").animate({ backgroundColor: "transparent" });
-}); 
-// another example | https://api.jqueryui.com/color-animation/
-$( "#codeItem" ).hover(function() {
-  $( "#codepen" ).animate({
-    color: "green",
-    backgroundColor: "rgb( 20, 20, 20 )"
-  });
+// Codepen hover color change using ANIMATE method with plug-in script on index.html
+$("#codeItem").hover(function() {
+  $("#codepen").animate({backgroundColor:"hsla(360, 100%, 100%, 0.33)"}, "slow");
+    }, function() {
+      $("#codepen").animate({backgroundColor:"hsla(360, 100%, 100%, 0);"}, "slow");
+        console.log("hovered Codepen");
 });
 
-
-// nav hover color change -- WORKING :)
+// nav hover color change using CSS method
 $("nav ul li a").hover(function() {
   $(this).css({"background-color":"white", "color":"hsla(11, 100%, 4%, 1)", "font-weight":"bold"});
     }, function() {
       $(this).css({"background-color":"hsla(11, 100%, 4%, 1)", "color":"white", "font-weight":"normal"});
+        console.log("nav hover");
 });
 
 // .hamburger hover color change
@@ -61,6 +43,16 @@ $(".hamburger, .homepageHamburger").click(function() {
     $("nav").animate({width: "0"}, 500);
     hamburgerToggle = 0;
   };
+});
+
+//box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1);
+$(".shopItem").hover(function() {
+  $(this).find("a").toggleClass("shopItemToggled");
+    console.log("shopItem box-shadow, toggleClass");
+});
+$(".shopItem a").click(function() {
+  event.preventDefault();
+  console.log("shopItem clicked");
 });
 
 // toggle page

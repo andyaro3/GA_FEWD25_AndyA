@@ -5,16 +5,6 @@ $(document).ready(function() {
 // Author: Andy Aronoff
 // Developer @GA in DC
 
-// // scrollBottom ftn, http://stackoverflow.com/questions/4655273/jquery-window-scrolltop-but-no-window-scrollbottom
-// $.fn.scrollBottom = function(scroll){
-//   if(typeof scroll === 'number'){
-//     window.scrollTo(0,$(document).height() - $(window).height() - scroll);
-//     return $(document).height() - $(window).height() - scroll;
-//   } else {
-//     return $(document).height() - $(window).height() - $(window).scrollTop();
-//   }
-// };
-
 // http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
 // var cssPageCode = $.when($.get("css/style.css").html());
 // alert("My CSS = " + cssPageCode);
@@ -92,27 +82,8 @@ $("#dropdownMenu a").click(function() {
   };
 }); // end anchor animate
 
-
-// hide #showCode div on window resize if showing
-// $(window).resize(function() {
-//   // This will fire each time the window is resized:
-//   if ($(window).width() >= 760 && hrefCode == 0) {
-//     // if large enough and not opened
-//     $("showCode").hide();
-//     hrefCode = 0;
-//   } else if ($(window).width() >= 760 && hrefCode == 1) {
-//     // if large enough window and opened
-//     $("showCode").show();
-//     hrefCode = 1;
-//   } else {
-//     // if smaller
-//     $("#showCode").hide();
-//     hrefCode = 0;
-//   };
-// });
-
 // close #showCode div
-$("#showCode a").click(function() {
+$("#showCode div a").click(function() {
   event.preventDefault();
   $("#showCode").slideUp(400);
   hrefCodeToggle = 0;

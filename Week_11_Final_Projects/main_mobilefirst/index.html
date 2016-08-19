@@ -51,46 +51,50 @@ Developer @GA in DC -->
 	</header>
 
 	<div id="showCode">
-		<a href="#closeShowCode">X</a>
-		<div class="codeBox" id="htmlBox"><pre id=htmlCode>.codeBox, #htmlBox</pre></div>
+		<div>
+			<a href="#closeShowCode">X</a>
+		</div>
+		<div class="codeBox" id="htmlBox"><pre id=htmlCode>.codeBox, #htmlBox
+		</pre></div>
 		<div class="codeBox" id="cssBox"><pre id=cssCode>.codeBox, #cssBox
-		/* Box Model Hack */
-* {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
-}
+					/* Box Model Hack */
+			* {
+			     -moz-box-sizing: border-box; /* Firexfox */
+			     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+			     box-sizing: border-box; /* IE */
+			}
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-</pre></div>
+			/* Clear fix hack */
+			.clearfix:after {
+			     content: ".";
+			     display: block;
+			     clear: both;
+			     visibility: hidden;
+			     line-height: 0;
+			     height: 0;
+			}
+		</pre></div>
 		<div class="codeBox" id="jsBox"><pre id=jsCode>.codeBox, #jsBox
-		var hrefFull;
-var hrefName;
-var hrefCodeToggle = 0;
-var menuToggle = 0;
-var htmlPageCode =  $("html").html();
-var cssPageCode =  $("css").html();
-var jsPageCode =  $("js").html();
+			var hrefFull;
+			var hrefName;
+			var hrefCodeToggle = 0;
+			var menuToggle = 0;
+			var htmlPageCode =  $("html").html();
+			var cssPageCode =  $("css").html();
+			var jsPageCode =  $("js").html();
 
-$("nav ul li a").click(function() {
-  event.preventDefault();
-  hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
-  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
+			$("nav ul li a").click(function() {
+			  event.preventDefault();
+			  hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
+			  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
 
-  // #showCode slideToggle
-  if (hrefName == "#showCode" && hrefCodeToggle == 0) {
-    $("#showCode").slideDown(400);
-    hrefCodeToggle = 1;
-    </pre></div>
-	</div>
+			  // #showCode slideToggle
+			  if (hrefName == "#showCode" && hrefCodeToggle == 0) {
+			    $("#showCode").slideDown(400);
+			    hrefCodeToggle = 1;
+	    </pre></div>
+	    <a href="http://www.codepen.io" class="codepenLink">Check this site out on Codepen!</a>
+	</div> <!-- close #showCode -->
 
 	<a id="homeLink" class="anchor"></a>
 

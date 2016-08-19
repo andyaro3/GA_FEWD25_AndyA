@@ -202,7 +202,7 @@ nav {
   display: none;
   border: 1px solid hsla(360, 100%, 100%, 1); /* white */
 }
-  #showCode a { /* #closeShowCode */
+  #showCode div a { /* #closeShowCode */
     display: block;
     width: 30px;
     height: 30px;
@@ -216,7 +216,7 @@ nav {
     background-color: hsla(0, 0%, 0%, 0); /* transparent */
     font-family: "Arial";
     line-height: .9;
-    /* fade in and out hover transition for nav a */
+    /* fade in and out hover transition for #showCode div a */
     -webkit-transition: background-color .33s ease-in;   
     -webkit-transition-delay: .1s; 
     -moz-transition: background-color .33s ease-in;   
@@ -228,7 +228,7 @@ nav {
     transition: background-color .33s ease-in;   
     transition-delay: .1s;
   }
-    #showCode a:hover { /* #closeShowCode */
+    #showCode div a:hover { /* #closeShowCode */
       background-color: hsla(94, 53%, 48%, .8); /* sage green */
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
@@ -236,6 +236,30 @@ nav {
       -o-transition-delay: 0s;
       transition-delay: 0s;
     }
+    .codepenLink {
+      text-decoration: none;
+      color: hsla(360, 100%, 100%, 1); /* white */
+      /* fade in and out hover transition for #codepenLink */
+      -webkit-transition: color .33s ease-in;   
+      -webkit-transition-delay: .1s; 
+      -moz-transition: color .33s ease-in;   
+      -moz-transition-delay: .1s; 
+      -ms-transition: color .33s ease-in;   
+      -ms-transition-delay: .1s; 
+      -o-transition: color .33s ease-in;   
+      -o-transition-delay: .1s; 
+      transition: color .33s ease-in;   
+      transition-delay: .1s;
+    }
+      .codepenLink:hover {
+        text-decoration: none;
+        color: hsla(360, 100%, 100%, .6); /* white */
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+      }
 
 .codeBox {
   width: 90%;
@@ -248,6 +272,7 @@ nav {
   line-height: 1.2;
   padding: 10px;
   text-align: left;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
   }
   /* styling scrollbar within the showCode */
   .codeBox::-webkit-scrollbar {
@@ -264,16 +289,9 @@ nav {
     background-color: hsla(0, 0%, 0%, 1); /* black */
   }
 
-
-#htmlBox {
-  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
-}
-#cssBox {
-  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
-}
-#jsBox {
-  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
-}
+#htmlBox {}
+#cssBox {}
+#jsBox {}
 
 /* background images */
 .background1 {
