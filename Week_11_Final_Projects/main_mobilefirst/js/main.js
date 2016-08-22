@@ -5,10 +5,6 @@ $(document).ready(function() {
 // Author: Andy Aronoff
 // Developer @GA in DC
 
-// http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
-// var cssPageCode = $.when($.get("css/style.css").html());
-// alert("My CSS = " + cssPageCode);
-
 // anchor animate, #showCode slideToggle, #menuLink slideToggle
 var hrefFull;
 var hrefName;
@@ -16,6 +12,7 @@ var hrefCodeToggle = 0;
 var menuToggle = 0;
 var htmlPageCode =  $("html").html();
 // var cssPageCode =  $("css").html();
+//// doesn't work for the above: http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
 // var jsPageCode =  $("js").html();
 
 $("nav ul li a").click(function() {
@@ -92,16 +89,17 @@ $("#showCode div a").click(function() {
 // hide #dropdownMenu ul on window resize if showing
 $(window).resize(function() {
   // This will fire each time the window is resized:
-  if ($(window).width() >= 760 && menuToggle == 0) {
-    // if large enough and not opened, keep closed
+
+  if ($(window).width() >= 741) { // strange window size?
+    // if large enough, hide
     $("#dropdownMenu").hide();
     menuToggle = 0;
-  } else if ($(window).width() >= 760 && menuToggle == 1) {
-    // if large enough window and opened, keep open
+  } else if ($(window).width() < 741 && menuToggle == 1) {
+    // if menu opened and smaller window, keep open
     $("#dropdownMenu").show();
     menuToggle = 1;
   } else {
-    // if smaller and opened, close
+    // outlier cases
     $("#dropdownMenu").hide();
     menuToggle = 0;
   };

@@ -10,7 +10,7 @@ Developer @GA in DC -->
 	<meta charset="utf-8">
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="one, two, three">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Unite Gallery -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 	<meta name="viewport" content="width=device-width">
 
 	<title>A.Aronoff</title>
@@ -18,9 +18,6 @@ Developer @GA in DC -->
 	<!-- Google Font links -->
 	<link href='https://fonts.googleapis.com/css?family=Vidaloka|Open+Sans+Condensed:300,300italic|Fredericka+the+Great|Space+Mono' rel='stylesheet' type='text/css'>
 	
-
-
-
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -31,10 +28,9 @@ Developer @GA in DC -->
 		<h1>Andy Aronoff</h1>
 		<nav>
 			<ul>
-	 			<!-- <li><a href="#namedLink">Go To Point On Page</a></li> USE BELOW: <a name="namedLink"></a> -->
+	 			<!-- format <li><a href="#namedLink">Go To Point On Page</a></li> USE BELOW: <a name="namedLink"></a> -->
 				<li><a href="#menuLink" class="mediaBigHide">menu</a></li>
 				<li><a href="#contactLink" class="mediaBigShow">contact</a></li>
-				<!-- <li><a href="#resumeLink" class="mediaBigShow">resume</a></li> -->
 				<li><a href="#worksLink" class="mediaBigShow">works</a></li>
 				<li><a href="#aboutLink" class="mediaBigShow">about</a></li>
 				<li><a href="#homeLink" class="mediaBigShow">home</a></li>
@@ -45,8 +41,7 @@ Developer @GA in DC -->
 			<li><a href="#homeLink">home</a></li>
 			<li><a href="#aboutLink">about</a></li>
 			<li><a href="#worksLink">works</a></li>
-			<!-- <li><a href="#resumeLink">resume</a></li> -->
-			<li><a href="#contactLink">contact</a></li>			
+			<li><a href="#contactLink">contact</a></li>
 		</ul>
 	</header>
 
@@ -54,45 +49,677 @@ Developer @GA in DC -->
 		<div>
 			<a href="#closeShowCode">X</a>
 		</div>
-		<div class="codeBox" id="htmlBox"><pre id=htmlCode>.codeBox, #htmlBox
+
+		<!-- HTML CODEBOX -->
+		<div class="codeBox" id="htmlBox">
+		<pre id=htmlCode>.codeBox, #htmlBox
 		</pre></div>
-		<div class="codeBox" id="cssBox"><pre id=cssCode>.codeBox, #cssBox
-					/* Box Model Hack */
-			* {
-			     -moz-box-sizing: border-box; /* Firexfox */
-			     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-			     box-sizing: border-box; /* IE */
-			}
 
-			/* Clear fix hack */
-			.clearfix:after {
-			     content: ".";
-			     display: block;
-			     clear: both;
-			     visibility: hidden;
-			     line-height: 0;
-			     height: 0;
-			}
-		</pre></div>
-		<div class="codeBox" id="jsBox"><pre id=jsCode>.codeBox, #jsBox
-			var hrefFull;
-			var hrefName;
-			var hrefCodeToggle = 0;
-			var menuToggle = 0;
-			var htmlPageCode =  $("html").html();
-			var cssPageCode =  $("css").html();
-			var jsPageCode =  $("js").html();
+		<!-- CSS CODEBOX -->
+		<div class="codeBox" id="cssBox">
+<pre id=cssCode>
+/*
+Project Name: Final Project, Main_mobilefirst
+Client: FEWD25
+Author: Andy Aronoff
+Developer @GA in DC
+*/
 
-			$("nav ul li a").click(function() {
-			  event.preventDefault();
-			  hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
-			  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
+/*************************************
+/* COLORS
+/*************************************
+/* hsla(94, 53%, 48%, .8); /* sage green */
+/* hsla(94, 25%, 85%, 1); /* light green grey*/
+/* hsla(194, 25%, 85%, 1); /* pale blue grey */
+/* hsla(194, 95%, 57%, 0.85); /* aqua blue */
+/* hsla(0, 0%, 0%, 1); /* black */
+/* hsla(0, 0%, 53%, 0.85); /* medium grey */
+/* hsla(360, 100%, 100%, 1); /* white */
+/* hsla(12, 45%, 25%, 1); /* dark rust */
+/* hsla(0, 0%, 0%, 0); /* transparent */
 
-			  // #showCode slideToggle
-			  if (hrefName == "#showCode" && hrefCodeToggle == 0) {
-			    $("#showCode").slideDown(400);
-			    hrefCodeToggle = 1;
-	    </pre></div>
+/************************************
+/* Media Query Sizes
+/************************************
+/* @media screen and (max-width: 350px) {} 
+/* @media screen and (min-width: 759p) {}
+/* @media screen and (min-width: 1119px) {}
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/******************************************/
+
+body {
+  background-color: hsla(94, 25%, 85%, 1); /* light green grey*/
+  font-family: "Open Sans Condensed";
+  line-height: 1.4;
+  font-size: 20px;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: hsla(0, 0%, 0%, 1); /* black */
+  position: fixed;
+  top: 0;
+  height: 70px;
+  box-shadow: 0 5px 10px hsla(0, 0%, 10%, 0.9); 
+  z-index: 2;
+}
+  header h1 {
+    display: none;
+  }
+
+.anchor { /* offset the anchor call on same page */
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+nav {
+  float: right;
+  list-style: none;
+  width: 110%;
+  height: 100%;
+}
+  nav a {
+    display: block;
+    float: right;
+    width: 100px;
+    color: hsla(94, 25%, 85%, 1); /* light green grey*/
+    text-decoration: none;
+    font-family: "Open Sans Condensed";
+    font-size: 26px;
+    line-height: 1.1;
+    padding: 20px 0;
+    text-align: center;
+    height: 70px;
+    /* fade in and out hover transition for nav a */
+      -webkit-transition: background-color .33s ease-in;   
+      -webkit-transition-delay: .1s; 
+      -moz-transition: background-color .33s ease-in;   
+      -moz-transition-delay: .1s; 
+      -ms-transition: background-color .33s ease-in;   
+      -ms-transition-delay: .1s; 
+      -o-transition: background-color .33s ease-in;   
+      -o-transition-delay: .1s; 
+      transition: background-color .33s ease-in;   
+      transition-delay: .1s;
+  }
+    nav a:hover {
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    .codeBlue {
+      color: hsla(94, 53%, 48%, .8); /* sage green */
+      font-weight: bold;
+    }
+    .mediaBigShow {
+      display: none;
+    }
+    .mediaBigHide {
+    }
+
+#dropdownMenu {
+  width: 200px;
+  background-color: hsla(0, 0%, 0%, 1); /* black */
+  float: right;
+  z-index: 4;
+  display: none;
+}
+  #dropdownMenu a {
+    display: block;
+    padding: 10px 25px 1px 0;
+    width: 100%;
+    height: 55px;
+    text-align: right;
+    border-top: .1px solid hsla(94, 25%, 85%, 1); /* light green grey*/
+    color: hsla(94, 25%, 85%, 1); /* light green grey*/
+    text-decoration: none;
+    font-family: "Open Sans Condensed";
+    font-size: 26px;
+    line-height: 1.3;
+    /* fade in and out hover transition for nav a */
+      -webkit-transition: background-color .33s ease-in;   
+      -webkit-transition-delay: .1s; 
+      -moz-transition: background-color .33s ease-in;   
+      -moz-transition-delay: .1s; 
+      -ms-transition: background-color .33s ease-in;   
+      -ms-transition-delay: .1s; 
+      -o-transition: background-color .33s ease-in;   
+      -o-transition-delay: .1s; 
+      transition: background-color .33s ease-in;   
+      transition-delay: .1s;
+  }
+  #dropdownMenu a:hover {
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    @media screen and (min-width: 759px) {
+      .mediaBigShow {
+        display: block;
+      }
+      .mediaBigHide {
+        display: none
+      }
+    }
+
+#showCode {
+  /*height: 75%;*/
+  width: 75%;
+  background-color: hsla(0, 0%, 0%, 1); /* black */
+  color: white;
+  padding: 5px 5px 5px 5px;
+  position: fixed;
+  top: 2.5%;
+  right: 2.5%;
+  opacity: .9;
+  z-index: 4;
+  display: none;
+  border: 1px solid hsla(360, 100%, 100%, 1); /* white */
+}
+  #showCode div a { /* #closeShowCode */
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: hsla(360, 100%, 100%, 1); /* white */
+    position: fixed;
+    top: calc(3% + 5px);
+    right: calc(3% + 5px);
+    text-decoration: none;
+    padding-top: 5px;
+    border: 2px solid hsla(360, 100%, 100%, 1); /* white */
+    background-color: hsla(0, 0%, 0%, 0); /* transparent */
+    font-family: "Arial";
+    line-height: .9;
+    /* fade in and out hover transition for #showCode div a */
+      -webkit-transition: background-color .33s ease-in;   
+      -webkit-transition-delay: .1s; 
+      -moz-transition: background-color .33s ease-in;   
+      -moz-transition-delay: .1s; 
+      -ms-transition: background-color .33s ease-in;   
+      -ms-transition-delay: .1s; 
+      -o-transition: background-color .33s ease-in;   
+      -o-transition-delay: .1s; 
+      transition: background-color .33s ease-in;   
+      transition-delay: .1s;
+  }
+    #showCode div a:hover { /* #closeShowCode */
+      background-color: hsla(94, 53%, 48%, .8); /* sage green */
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    .codepenLink {
+      text-decoration: none;
+      color: hsla(360, 100%, 100%, 1); /* white */
+      /* fade in and out hover transition for #codepenLink */
+        -webkit-transition: color .33s ease-in;   
+        -webkit-transition-delay: .1s; 
+        -moz-transition: color .33s ease-in;   
+        -moz-transition-delay: .1s; 
+        -ms-transition: color .33s ease-in;   
+        -ms-transition-delay: .1s; 
+        -o-transition: color .33s ease-in;   
+        -o-transition-delay: .1s; 
+        transition: color .33s ease-in;   
+        transition-delay: .1s;
+    }
+      .codepenLink:hover {
+        text-decoration: none;
+          color: hsla(360, 100%, 100%, .6); /* white */
+          -webkit-transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          -ms-transition-delay: 0s;
+          -o-transition-delay: 0s;
+          transition-delay: 0s;
+      }
+
+.codeBox {
+  width: 90%;
+  height: 110px;
+  margin: 10px 5% 10px 5%;
+  float: left;
+  overflow: scroll;
+  font-family: "Space Mono";
+  font-size: 11px;
+  line-height: 1.2;
+  padding: 10px;
+  text-align: left;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
+  }
+  /* styling scrollbar within the showCode */
+  .codeBox::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .codeBox::-webkit-scrollbar-track {
+    background-color: hsla(12, 45%, 25%, 1); /* dark rust */
+  }
+  .codeBox::-webkit-scrollbar-thumb {
+      background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
+  }
+  .codeBox::-webkit-scrollbar-corner {
+    background-color: hsla(0, 0%, 0%, 1); /* black */
+  }
+
+#htmlBox {}
+#cssBox {}
+#jsBox {}
+
+/* background images */
+.background1 {
+  background-image: url("../images/background1_mobile.png");
+}
+.background2 {
+  background-image: url("../images/background2_mobile.png");
+}
+.background3 {
+  background-image: url("../images/background3_mobile.png");
+}
+
+main, .backgroundImage { 
+  margin: 70px 0 0 0;
+  z-index: 0;
+  /* background image styles */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 500px;
+  box-shadow: 0 5.5px 10px hsla(0, 0%, 10%, 0.8), 0 -5.5px 10px hsla(0, 0%, 10%, 0.8); /* bottom, top shadow */
+}
+  main h2, .backgroundImage h2 {
+    padding: 235px 0 0 15px;
+    text-align: center;
+    color: hsla(360, 100%, 100%, 1); /* white */
+    font-family: "Fredericka the Great";
+    font-size: 46px;
+  }
+  main video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: -150px;
+  }
+  @media screen and (max-width: 350px) {
+    main, .backgroundImage {
+      height: 400px;
+    }
+  }
+  @media screen and (min-width: 759px) {
+    main, .backgroundImage {
+      height: 600px;
+    }
+    main h2, .backgroundImage h2 {
+      padding-top: 280px;
+    }
+  }
+
+hr {
+  width: 60%;
+}
+
+section {
+  width: 100%;
+  min-height: 200px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+  section h2 {
+    display: block;
+    padding: 50px 0 40px 0;
+    font-family: "Vidaloka";
+    font-size: 40px;
+  }
+  section p {
+    margin: 0 10% 20px 10%;
+    width: 80%;
+  }
+
+.iceBreaker {
+  text-align: left;
+  margin: auto;
+  border: none;
+}
+  .iceBreaker td {
+    padding: 1px 2.5px 1px 12.5px;
+  }
+
+.profilePic {
+  background-image: url("../images/11703349_10103898775464568_2357507948393974766_n.jpg");
+  width: 300px;
+  height: 400px;
+  background-size: 531.75px 547.5px; /* X709 x Y720 */
+  background-position: top left;
+  margin: 30px auto;
+}
+
+.profileBio {
+  width: 70%;
+  margin: 0 15% 0 15%;
+  text-align: left;
+}
+  .profileBio:first-letter {
+    font-size: 56px;
+    line-height: .8;
+    float: left;
+    padding: 6px 5px 0 2px;
+  }
+    @media screen and (min-width: 759px) and (max-width: 1118px){
+      .profileBox {
+        width: 100%;
+        height: 460px;
+        position: relative;
+      }
+      .profilePic {
+        display: inline-block;
+        position: absolute;
+        left: 10%;
+        top: 28px;
+        margin: 0;
+      }
+      .profileBio {
+        display: inline-block;
+        position: absolute;
+        right: 2%;
+        top: 20px;
+        width: 50%;
+        margin: 0;
+      }
+    }
+    @media screen and (min-width: 1119px) {
+      .profileBox {
+        height: 450px;
+      }
+      .profilePic {
+        float: left;
+        margin-left: 20%;
+      }
+      .profileBio {
+        float: left;
+        width: 50%;
+        float: left;
+        display: inline-block;
+        margin: -435px 20% 0 calc(20% + 300px);
+      }
+    }
+
+.outer {
+  width: 70%;
+  min-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.innerGallery {
+  width: 270px;
+  text-align: center;
+  padding: 2.5px;
+  overflow: hidden;
+  margin: auto;
+}
+  @media screen and (min-width: 759px) { 
+  .innerGallery {
+    width: 525px;
+  }
+}
+  @media screen and (min-width: 1119px) {
+  .innerGallery {
+    width: 785px;
+  }
+}
+
+.tile {
+  width: 250px;
+  height: 250px; 
+  margin: 5px;
+  float: left;
+  background-color: hsla(94, 53%, 48%, .8); /* sage green */
+  /* fade in and out hover transition for div */
+    -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: background-color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: background-color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: background-color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: background-color .33s ease-in;   
+    transition-delay: .1s;
+}
+  .tile:hover {
+    background-color: hsla(0, 0%, 0%, 1); /* black */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
+footer {
+  width: 100%;
+  height: 330px;
+  background-color: hsla(0, 0%, 0%, 1); /* black */
+  color: hsla(94, 25%, 85%, 1); /* light green grey*/
+  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.9); 
+}
+  footer h2 {
+    display: block;
+    font-family: "Vidaloka";
+    font-size: 40px;
+    padding: 50px 0 40px 0;
+  }
+  footer ul {
+    margin-bottom: 40px;
+  }
+  footer li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+
+.socialIcon {
+  display: block;
+  height: 50px;
+  width: 50px;
+  padding-top: 2.5px;
+  background-size: 103px 103px;
+  background-position: 50px 0px;
+  background-color: hsla(360, 100%, 100%, 1); /* white */
+  color: hsla(0, 0%, 0%, 1); /* black */
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  /* fade in and out hover transition for icon */
+    -webkit-transition: color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: color .33s ease-in;   
+    transition-delay: .1s;
+}
+  .socialIcon:hover {
+    color: hsla(94, 53%, 48%, .8); /* sage green */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
+.resumeIcon {
+  font-size: 10px;
+/*  display: block;
+  line-height: .5;
+  margin-top: -30px;*/
+}
+</pre>
+		</div>
+
+		<!-- JS CODEBOX -->
+		<div class="codeBox" id="jsBox">
+<pre id=jsCode>
+$(document).ready(function() {
+
+// Project Name: Final Project, Main_mobilefirst
+// Client: FEWD25
+// Author: Andy Aronoff
+// Developer @GA in DC
+
+// anchor animate, #showCode slideToggle, #menuLink slideToggle
+var hrefFull;
+var hrefName;
+var hrefCodeToggle = 0;
+var menuToggle = 0;
+var htmlPageCode =  $("html").html();
+// var cssPageCode =  $("css").html();
+//// doesn't work for the above: http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
+// var jsPageCode =  $("js").html();
+
+$("nav ul li a").click(function() {
+  event.preventDefault();
+  hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
+  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
+
+  // #showCode slideToggle
+  if (hrefName == "#showCode" && hrefCodeToggle == 0) {
+    $("#showCode").slideDown(400);
+    hrefCodeToggle = 1;
+    $("#htmlCode").text(htmlPageCode); // pull/show HTML code for page
+    // $("#cssCode").text(cssPageCode); // pull/show CSS code? doc
+    // $("#jsCode").text(jsPageCode); // pull/show JS code? doc
+  } else if (hrefName == "#showCode" && hrefCodeToggle == 1) {
+    $("#showCode").slideUp(400);
+    hrefCodeToggle = 0;
+
+  // #menuLink slideToggle
+  } else if (hrefName == "#menuLink" && menuToggle == 0) {
+    $("#dropdownMenu").slideDown(400);
+    menuToggle = 1;  
+  } else if (hrefName == "#menuLink" && menuToggle == 1) {
+    $("#dropdownMenu").slideUp(400);
+    menuToggle = 0;
+
+  // anchor animate for full nav
+  } else if (hrefName == "#contactLink") {
+    //attempt 1 - scrolls past bottom of document, takes time to scroll back in
+    $("html, body").animate({
+        scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
+      }, 2000);
+    $("#dropdownMenu").slideUp(400);
+    console.log("#dropdownMenu #contactLink");
+    menuToggle = 0;
+  } else {
+    $("html, body").animate({
+        scrollTop: $(hrefName).offset().top // calculates difference and goes there on the page
+      }, 1000);
+    $("#dropdownMenu").slideUp(400);
+    menuToggle = 0;
+  };
+}); // #showCode slideToggle, #menuLink slideToggle
+
+$("#dropdownMenu a").click(function() {
+  event.preventDefault();
+  hrefFull = event.target.href;
+  hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
+
+  if (hrefName == "#contactLink") {
+    //attempt 1 - scrolls past bottom of document, takes time to scroll back in
+    $("html, body").animate({
+        scrollTop: document.body.scrollHeight // scrolls the whole distance of the document
+      }, 2000);
+    $("#dropdownMenu").slideUp(400);
+    console.log("#dropdownMenu #contactLink");
+    menuToggle = 0;
+  } else {
+    $("html, body").animate({
+        scrollTop: $(hrefName).offset().top // calculates difference and goes there on the page
+      }, 1000);
+    $("#dropdownMenu").slideUp(400);
+    menuToggle = 0;
+  };
+}); // end anchor animate
+
+// close #showCode div
+$("#showCode div a").click(function() {
+  event.preventDefault();
+  $("#showCode").slideUp(400);
+  hrefCodeToggle = 0;
+});
+
+// hide #dropdownMenu ul on window resize if showing
+$(window).resize(function() {
+  // This will fire each time the window is resized:
+
+  if ($(window).width() >= 741) { // strange window size?
+    // if large enough, hide
+    $("#dropdownMenu").hide();
+    menuToggle = 0;
+  } else if ($(window).width() < 741 && menuToggle == 1) {
+    // if menu opened and smaller window, keep open
+    $("#dropdownMenu").show();
+    menuToggle = 1;
+  } else {
+    // outlier cases
+    $("#dropdownMenu").hide();
+    menuToggle = 0;
+  };
+});
+
+
+}); //close document.ready
+</pre>
+	    </div>
+
 	    <a href="http://www.codepen.io" class="codepenLink">Check this site out on Codepen!</a>
 	</div> <!-- close #showCode -->
 
@@ -100,18 +727,13 @@ Developer @GA in DC -->
 
 	<main class="background1">
 		<h2>Andy Aronoff</h2>
-<!-- 		<video autoplay loop>
-			<source src="images/bluewater.mp4" type="video/mp4">
-			Your browser does not support the video tag :(
-        </video> -->
 	</main>
-	<!-- <hr> -->
 
 	<a id="aboutLink" class="anchor"></a>
 	<section class="about">
 		<h2>Ice Breaker</h2>
 		<table class="iceBreaker">
- 		<!-- <tr>
+ 		<!-- format <tr>
 		    <th>Question</th>
 		    <th>Answer</th> 
 		  </tr> -->
@@ -140,7 +762,9 @@ Developer @GA in DC -->
 		<div class="profileBox">
 			<div class="profilePic"></div>
 			<div class="profileBio">
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Hello! I am a front-end web developer with experience in graphic design and UI development. I have been both the designer, creating a user-friendly interface and functionality, to handling customer serivce and working with customers to help make their wishes come true. I have served as a QA tester on UI and site functionality as well. <br><br>
+
+				While I am focusing on my growth as a developer, I have enjoyed my roles as a project manager for technology campaigns and have experience as the on-site IT manager for a mid-sized company. With my variety of experiences, attention to detail, organizational and multi-tasking skills, coupled with my apt for problem-solving, I love taking on new opportunities to evolve. </p>
 			</div>
 		</div>
 	</section>
@@ -150,35 +774,45 @@ Developer @GA in DC -->
 	</div>
 
 	<a id="worksLink" class="anchor"></a>
-	<!-- http://tympanus.net/Development/GridLoadingEffects/index3.html -->
 	<section>
 		<h2>Works</h2>
-<!-- 		<p>Click on a project below to see the example site and code (optimized for full browser).</p> -->
 		<div class="outer">
 			<div class="innerGallery">
-				<a href="#">
-					<div class="tile"></div> <!-- img -->
+				<a href="file:///C:/Users/Andy%20Aronoff/Documents/GitHub/GA_FEWD25_AndyA/Week_11_Final_Projects/main_mobilefirst/index.html">
+					<div class="tile projectOne">
+						<p>Portfolio Site (this page)</p>
+						<div class="codepenLogo"></div>
+					</div> 
 				</a>
 				<a href="#">
-					<div class="tile"></div> <!-- img -->
+					<div class="tile projectTwo">
+						<p> Sample: Central Cafe</p>
+						<div class="codepenLogo"></div>
+					</div>
 				</a>
 				<a href="#">
-					<div class="tile"></div> <!-- img -->
+					<div class="tile">
+						<p>Project 3 Name</p>
+						<div class="codepenLogo"></div>
+					</div> 
 				</a>
 				<a href="#">
-					<div class="tile"></div> <!-- img -->
+					<div class="tile">
+						<p>Project 4 Name</p>
+						<div class="codepenLogo"></div>
+					</div> 
 				</a>
 				<a href="#">
-					<div class="tile"></div> <!-- img -->
+					<div class="tile">
+						<p>Project 5 Name</p>
+						<div class="codepenLogo"></div>
+					</div> 
 				</a>
 				<a href="#">
-					<div class="tile"></div> <!-- img -->
-				</a>
-				<a href="#">
-					<div class="tile"></div> <!-- img -->
-				</a>
-				<a href="#">
-					<div class="tile"></div> <!-- img -->
+					<div class="tile">
+						<p>Project 6 Name</p>
+						<div class="codepenLogo"></div>
+					</div> 
 				</a>
 			</div> <!-- .innerGallery close -->
 		</div> <!-- .outer close -->
@@ -187,25 +821,18 @@ Developer @GA in DC -->
 	<div class="backgroundImage background3">
 		<h2>#driven</h2>
 	</div>
-<!-- 	<hr class="mediaMobileHide">
-
-	<a id="resumeLink" class="anchor"></a>
-	<section class="mediaMobileHide">
-		<h2>RESUM&Eacute</h2>
-		<div class="outer">
-		</div>
-	</section> -->
 	
 	<a id="contactLink"></a>
 	<footer>
 		<h2>Contact</h2>
 		<ul class="social">
-			<li><a href="http://www.facebook.com/andyaro3" class="socialIcon">&nbsp; f</a>
+			<li><a href="http://www.facebook.com/andyaro3" class="socialIcon" alt="Facebook">&nbsp; f</a>
 			</a></li>
-			<li><a href="https://www.linkedin.com/in/andrew-aronoff-93b16267?trk=hp-identity-photo" class="socialIcon">in</a>
+			<li><a href="https://www.linkedin.com/in/andrew-aronoff-93b16267?trk=hp-identity-photo" class="socialIcon" alt="LinkedIn">in</a>
 			</a></li>
-			<li><a href="http://www.github.com/andyaro3" class="socialIcon">git</a>
+			<li><a href="http://www.github.com/andyaro3" class="socialIcon" alt="GitHub">git</a>
 			</a></li>
+			<li><a href="" class="socialIcon" alt="Resumé"><span class="resumeIcon">resu</span>mé</a></li>
 		</ul>
 		<p>&copy; 2016 | Andy Aronoff</p>
 	</footer>
