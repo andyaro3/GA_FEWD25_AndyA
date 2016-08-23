@@ -295,13 +295,13 @@ nav {
 
 /* background images */
 .background1 {
-  background-image: url("../images/background1_mobile.png");
+  background-image: url("../images/background1_mobile.jpg");
 }
 .background2 {
-  background-image: url("../images/background2_mobile.png");
+  background-image: url("../images/background2_mobile.jpg");
 }
 .background3 {
-  background-image: url("../images/background3_mobile.png");
+  background-image: url("../images/background3_mobile.jpg");
 }
 
 main, .backgroundImage { 
@@ -554,13 +554,13 @@ section {
   }
 
 .projectOne {
-  background-image: url("../images/background1_mobile.png");
+  background-image: url("../images/background1_mobile.jpg");
   background-size: 170%;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .projectTwo {
-  background-image: url("../images/coffeeshop2_mobile.png");
+  background-image: url("../images/coffeeshop2_mobile.jpg");
   background-size: 170%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -622,6 +622,7 @@ footer {
 
 .resumeIcon {
   font-size: 10px;
+  font-weight: normal;
 /*  display: block;
   line-height: .5;
   margin-top: -30px;*/

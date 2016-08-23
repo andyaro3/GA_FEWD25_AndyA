@@ -15,7 +15,7 @@ var htmlPageCode =  $("html").html();
 //// doesn't work for the above: http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
 // var jsPageCode =  $("js").html();
 
-$("nav ul li a").click(function() {
+$("nav ul li a").click(function(event) {
   event.preventDefault();
   hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
@@ -57,7 +57,7 @@ $("nav ul li a").click(function() {
   };
 }); // #showCode slideToggle, #menuLink slideToggle
 
-$("#dropdownMenu a").click(function() {
+$("#dropdownMenu a").click(function(event) {
   event.preventDefault();
   hrefFull = event.target.href;
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
@@ -80,7 +80,7 @@ $("#dropdownMenu a").click(function() {
 }); // end anchor animate
 
 // close #showCode div
-$("#showCode div a").click(function() {
+$("#showCode div a").click(function(event) {
   event.preventDefault();
   $("#showCode").slideUp(400);
   hrefCodeToggle = 0;

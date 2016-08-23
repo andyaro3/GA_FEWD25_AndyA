@@ -59,7 +59,7 @@ $(".shopItem a").click(function() {
 var hrefFull;
 var hrefName;
 
-$("nav ul li a").click(function() {
+$("nav ul li a").click(function(event) {
   event.preventDefault();
   hrefFull = event.target.href;
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
