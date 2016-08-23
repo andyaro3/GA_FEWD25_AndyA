@@ -8,10 +8,12 @@ Developer @GA in DC -->
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Your description goes here">
-	<meta name="keywords" content="one, two, three">
+	<meta name="description" content="Andrew Aronoff's personal website portfolio">
+	<meta name="keywords" content="Andy Andrew Aronoff Andyaro Andyaro3 portfolio designer web-designer graphic design front-end javascript">
+	<meta name="author" content="Andrew Andy M. Aronoff">
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="viewport" content="width=device-width">
 
 	<title>A.Aronoff</title>
@@ -54,25 +56,16 @@ Developer @GA in DC -->
 		<!-- HTML CODEBOX -->
 		<div class="codeBox" id="htmlBox">
 		<pre id=htmlCode>.codeBox, #htmlBox
-		</pre></div>
+		</pre></div> <!-- close #htmlBox -->
 
 		<!-- CSS CODEBOX -->
 		<div class="codeBox" id="cssBox">
 <pre id=cssCode>
-/*
-Project Name: Final Project, Main_mobilefirst
-Client: FEWD25
-Author: Andy Aronoff
-Developer @GA in DC
-*/
-
 /*************************************
 /* COLORS
 /*************************************
 /* hsla(94, 53%, 48%, .8); /* sage green */
 /* hsla(94, 25%, 85%, 1); /* light green grey*/
-/* hsla(194, 25%, 85%, 1); /* pale blue grey */
-/* hsla(194, 95%, 57%, 0.85); /* aqua blue */
 /* hsla(0, 0%, 0%, 1); /* black */
 /* hsla(0, 0%, 53%, 0.85); /* medium grey */
 /* hsla(360, 100%, 100%, 1); /* white */
@@ -80,71 +73,59 @@ Developer @GA in DC
 /* hsla(0, 0%, 0%, 0); /* transparent */
 
 /************************************
-/* Media Query Sizes
+/* MEDIA QUERY SIZES
 /************************************
 /* @media screen and (max-width: 350px) {} 
 /* @media screen and (min-width: 759p) {}
+/* @media screen and (min-width: 759px) and (max-width: 1118px) {
 /* @media screen and (min-width: 1119px) {}
 
 /******************************************
-/* SETUP
+/* STYLES
 /*******************************************/
 
-/* Box Model Hack */
+/* BOX MODEL HACK */
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
 }
 
-/* Clear fix hack */
+/* CLEAR FIX HACK */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
-}
-
-.alignright {
-	float: right;
-}
-
-.alignleft {
-	float: left;
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
 }
 
 .bold {
   font-weight: bold;
 }
 
-/******************************************/
-
 body {
   background-color: hsla(94, 25%, 85%, 1); /* light green grey*/
   font-family: "Open Sans Condensed";
-  line-height: 1.4;
   font-size: 20px;
+  line-height: 1.4;
   text-align: center;
 }
 
 header {
-  width: 100%;
   background-color: hsla(0, 0%, 0%, 1); /* black */
-  position: fixed;
-  top: 0;
-  height: 70px;
   box-shadow: 0 5px 10px hsla(0, 0%, 10%, 0.9); 
+  height: 70px;
+  position: fixed;
+  top: 0;  
+  width: 100%;
   z-index: 2;
 }
-  header h1 {
-    display: none;
-  }
+
+header h1 {
+  display: none;
+}
 
 .anchor { /* offset the anchor call on same page */
   display: block;
@@ -155,239 +136,216 @@ header {
 
 nav {
   float: right;
+  height: 100%;
   list-style: none;
   width: 110%;
-  height: 100%;
 }
-  nav a {
-    display: block;
-    float: right;
-    width: 100px;
-    color: hsla(94, 25%, 85%, 1); /* light green grey*/
-    text-decoration: none;
-    font-family: "Open Sans Condensed";
-    font-size: 26px;
-    line-height: 1.1;
-    padding: 20px 0;
-    text-align: center;
-    height: 70px;
-    /* fade in and out hover transition for nav a */
-      -webkit-transition: background-color .33s ease-in;   
-      -webkit-transition-delay: .1s; 
-      -moz-transition: background-color .33s ease-in;   
-      -moz-transition-delay: .1s; 
-      -ms-transition: background-color .33s ease-in;   
-      -ms-transition-delay: .1s; 
-      -o-transition: background-color .33s ease-in;   
-      -o-transition-delay: .1s; 
-      transition: background-color .33s ease-in;   
-      transition-delay: .1s;
+
+nav a {
+  color: hsla(94, 25%, 85%, 1); /* light green grey*/
+  display: block;
+  float: right;
+  font-family: "Open Sans Condensed";
+  font-size: 26px;
+  height: 70px;
+  line-height: 1.1;
+  padding: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  /* fade in and out hover transition for nav a */
+    -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: background-color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: background-color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: background-color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: background-color .33s ease-in;   
+    transition-delay: .1s;
   }
-    nav a:hover {
-      background-color: hsla(94, 53%, 48%, .8); /* sage green */
-        -webkit-transition-delay: 0s;
-        -moz-transition-delay: 0s;
-        -ms-transition-delay: 0s;
-        -o-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-    .codeBlue {
-      color: hsla(94, 53%, 48%, .8); /* sage green */
-      font-weight: bold;
-    }
+  nav a:hover {
+    background-color: hsla(94, 53%, 48%, .8); /* sage green */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
+.codeBlue {
+  color: hsla(94, 53%, 48%, .8); /* sage green */
+  font-weight: bold;
+}
+
+.mediaBigShow {
+  display: none;
+}
+
+.mediaBigHide {}
+
+  @media screen and (min-width: 759px) {
     .mediaBigShow {
-      display: none;
+      display: block;
     }
     .mediaBigHide {
+      display: none
     }
+  }
 
 #dropdownMenu {
-  width: 200px;
   background-color: hsla(0, 0%, 0%, 1); /* black */
-  float: right;
-  z-index: 4;
   display: none;
+  float: right;
+  width: 200px;
+  z-index: 4;
 }
-  #dropdownMenu a {
-    display: block;
-    padding: 10px 25px 1px 0;
-    width: 100%;
-    height: 55px;
-    text-align: right;
-    border-top: .1px solid hsla(94, 25%, 85%, 1); /* light green grey*/
-    color: hsla(94, 25%, 85%, 1); /* light green grey*/
-    text-decoration: none;
-    font-family: "Open Sans Condensed";
-    font-size: 26px;
-    line-height: 1.3;
-    /* fade in and out hover transition for nav a */
-      -webkit-transition: background-color .33s ease-in;   
-      -webkit-transition-delay: .1s; 
-      -moz-transition: background-color .33s ease-in;   
-      -moz-transition-delay: .1s; 
-      -ms-transition: background-color .33s ease-in;   
-      -ms-transition-delay: .1s; 
-      -o-transition: background-color .33s ease-in;   
-      -o-transition-delay: .1s; 
-      transition: background-color .33s ease-in;   
-      transition-delay: .1s;
-  }
+
+#dropdownMenu a {
+  border-top: .1px solid hsla(94, 25%, 85%, 1); /* light green grey*/
+  color: hsla(94, 25%, 85%, 1); /* light green grey*/
+  display: block;
+  font-family: "Open Sans Condensed";
+  font-size: 26px;
+  height: 55px;
+  line-height: 1.3;
+  padding: 10px 25px 1px 0;
+  text-align: right;
+  text-decoration: none;
+  width: 100%; 
+  /* fade in and out hover transition for nav a */
+    -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: background-color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: background-color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: background-color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: background-color .33s ease-in;   
+    transition-delay: .1s;
+}
   #dropdownMenu a:hover {
-      background-color: hsla(94, 53%, 48%, .8); /* sage green */
-        -webkit-transition-delay: 0s;
-        -moz-transition-delay: 0s;
-        -ms-transition-delay: 0s;
-        -o-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-    @media screen and (min-width: 759px) {
-      .mediaBigShow {
-        display: block;
-      }
-      .mediaBigHide {
-        display: none
-      }
-    }
+    background-color: hsla(94, 53%, 48%, .8); /* sage green */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
 
 #showCode {
-  /*height: 75%;*/
-  width: 75%;
   background-color: hsla(0, 0%, 0%, 1); /* black */
+  border: 1px solid hsla(360, 100%, 100%, 1); /* white */
   color: white;
+  display: none;
+  opacity: .9;
   padding: 5px 5px 5px 5px;
   position: fixed;
-  top: 2.5%;
   right: 2.5%;
-  opacity: .9;
+  top: 2.5%;
+  width: 75%;
   z-index: 4;
-  display: none;
-  border: 1px solid hsla(360, 100%, 100%, 1); /* white */
 }
-  #showCode div a { /* #closeShowCode */
-    display: block;
-    width: 30px;
-    height: 30px;
-    color: hsla(360, 100%, 100%, 1); /* white */
-    position: fixed;
-    top: calc(3% + 5px);
-    right: calc(3% + 5px);
-    text-decoration: none;
-    padding-top: 5px;
-    border: 2px solid hsla(360, 100%, 100%, 1); /* white */
-    background-color: hsla(0, 0%, 0%, 0); /* transparent */
-    font-family: "Arial";
-    line-height: .9;
-    /* fade in and out hover transition for #showCode div a */
-      -webkit-transition: background-color .33s ease-in;   
-      -webkit-transition-delay: .1s; 
-      -moz-transition: background-color .33s ease-in;   
-      -moz-transition-delay: .1s; 
-      -ms-transition: background-color .33s ease-in;   
-      -ms-transition-delay: .1s; 
-      -o-transition: background-color .33s ease-in;   
-      -o-transition-delay: .1s; 
-      transition: background-color .33s ease-in;   
-      transition-delay: .1s;
+
+#showCode div a { /* #closeShowCode */
+  background-color: hsla(0, 0%, 0%, 0); /* transparent */
+  border: 2px solid hsla(360, 100%, 100%, 1); /* white */
+  color: hsla(360, 100%, 100%, 1); /* white */
+  display: block;
+  font-family: "Arial";
+  height: 30px;
+  line-height: .9;
+  padding-top: 5px;
+  position: fixed;
+  right: calc(3% + 5px);
+  text-decoration: none;
+  top: calc(3% + 5px);
+  width: 30px;
+  /* fade in and out hover transition for #showCode div a */
+    -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: background-color .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: background-color .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: background-color .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: background-color .33s ease-in;   
+    transition-delay: .1s;
+}
+  #showCode div a:hover { /* #closeShowCode */
+    background-color: hsla(94, 53%, 48%, .8); /* sage green */
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
   }
-    #showCode div a:hover { /* #closeShowCode */
-      background-color: hsla(94, 53%, 48%, .8); /* sage green */
-        -webkit-transition-delay: 0s;
-        -moz-transition-delay: 0s;
-        -ms-transition-delay: 0s;
-        -o-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-    .codepenLink {
-      text-decoration: none;
-      color: hsla(360, 100%, 100%, 1); /* white */
-      /* fade in and out hover transition for #codepenLink */
-        -webkit-transition: color .33s ease-in;   
-        -webkit-transition-delay: .1s; 
-        -moz-transition: color .33s ease-in;   
-        -moz-transition-delay: .1s; 
-        -ms-transition: color .33s ease-in;   
-        -ms-transition-delay: .1s; 
-        -o-transition: color .33s ease-in;   
-        -o-transition-delay: .1s; 
-        transition: color .33s ease-in;   
-        transition-delay: .1s;
-    }
-      .codepenLink:hover {
-        text-decoration: none;
-          color: hsla(360, 100%, 100%, .6); /* white */
-          -webkit-transition-delay: 0s;
-          -moz-transition-delay: 0s;
-          -ms-transition-delay: 0s;
-          -o-transition-delay: 0s;
-          transition-delay: 0s;
-      }
 
 .codeBox {
-  width: 90%;
-  height: 110px;
-  margin: 10px 5% 10px 5%;
+  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
   float: left;
-  overflow: scroll;
   font-family: "Space Mono";
   font-size: 11px;
+  height: 110px;
   line-height: 1.2;
+  margin: 10px 5% 10px 5%;
+  overflow: scroll;
   padding: 10px;
   text-align: left;
-  background-color: hsla(12, 45%, 25%, 1); /* dark rust */
-  }
+  width: 90%;
+}
   /* styling scrollbar within the showCode */
   .codeBox::-webkit-scrollbar {
-    width: 10px;
     height: 10px;
+    width: 10px;
+  }
+  .codeBox::-webkit-scrollbar-corner {
+    background-color: hsla(0, 0%, 0%, 1); /* black */
   }
   .codeBox::-webkit-scrollbar-track {
     background-color: hsla(12, 45%, 25%, 1); /* dark rust */
   }
   .codeBox::-webkit-scrollbar-thumb {
-      background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
+    background-color: hsla(0, 0%, 53%, 0.85); /* medium grey */
   }
-  .codeBox::-webkit-scrollbar-corner {
-    background-color: hsla(0, 0%, 0%, 1); /* black */
-  }
-
+  
 #htmlBox {}
 #cssBox {}
 #jsBox {}
 
-/* background images */
+/* BACKGROUND IMAGES */
 .background1 {
-  background-image: url("../images/background1_mobile.png");
+  background-image: url("../images/background1_mobile.jpg");
 }
 .background2 {
-  background-image: url("../images/background2_mobile.png");
+  background-image: url("../images/background2_mobile.jpg");
 }
 .background3 {
-  background-image: url("../images/background3_mobile.png");
+  background-image: url("../images/background3_mobile.jpg");
 }
 
 main, .backgroundImage { 
   margin: 70px 0 0 0;
   z-index: 0;
   /* background image styles */
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top center;
-  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0 5.5px 10px hsla(0, 0%, 10%, 0.8), 0 -5.5px 10px hsla(0, 0%, 10%, 0.8); /* bottom, top shadow */
+  height: 500px;
 }
-  main h2, .backgroundImage h2 {
-    padding: 235px 0 0 15px;
-    text-align: center;
-    color: hsla(360, 100%, 100%, 1); /* white */
-    font-family: "Fredericka the Great";
-    font-size: 46px;
-  }
-  main video {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin-top: -150px;
-  }
+
+main h2, .backgroundImage h2 {
+  color: hsla(360, 100%, 100%, 1); /* white */
+  font-family: "Fredericka the Great";
+  font-size: 46px;
+  padding: 235px 0 0 15px;
+  text-align: center;
+}
+
   @media screen and (max-width: 350px) {
     main, .backgroundImage {
       height: 400px;
@@ -402,140 +360,147 @@ main, .backgroundImage {
     }
   }
 
-hr {
-  width: 60%;
-}
-
 section {
-  width: 100%;
+  margin-bottom: 80px;
   min-height: 200px;
   text-align: center;
-  margin-bottom: 80px;
+  width: 100%;
 }
-  section h2 {
-    display: block;
-    padding: 50px 0 40px 0;
-    font-family: "Vidaloka";
-    font-size: 40px;
-  }
-  section p {
-    margin: 0 10% 20px 10%;
-    width: 80%;
-  }
+
+section h2 {
+  display: block;
+  font-family: "Vidaloka";
+  font-size: 40px;
+  padding: 50px 0 40px 0;
+}
+
+section p {
+  margin: 0 10% 20px 10%;
+  width: 80%;
+}
 
 .iceBreaker {
-  text-align: left;
-  margin: auto;
   border: none;
+  margin: auto;
+  text-align: left;
 }
-  .iceBreaker td {
-    padding: 1px 2.5px 1px 12.5px;
-  }
+
+.iceBreaker td {
+  padding: 1px 2.5px 1px 12.5px;
+}
 
 .profilePic {
   background-image: url("../images/11703349_10103898775464568_2357507948393974766_n.jpg");
-  width: 300px;
-  height: 400px;
-  background-size: 531.75px 547.5px; /* X709 x Y720 */
   background-position: top left;
+  background-size: 531.75px 547.5px; /* X709 x Y720 */
+  height: 400px;
   margin: 30px auto;
+  width: 300px;
 }
 
 .profileBio {
-  width: 70%;
   margin: 0 15% 0 15%;
   text-align: left;
+  width: 70%;
 }
   .profileBio:first-letter {
+    float: left;
     font-size: 56px;
     line-height: .8;
-    float: left;
     padding: 6px 5px 0 2px;
   }
-    @media screen and (min-width: 759px) and (max-width: 1118px){
-      .profileBox {
-        width: 100%;
-        height: 460px;
-        position: relative;
-      }
-      .profilePic {
-        display: inline-block;
-        position: absolute;
-        left: 10%;
-        top: 28px;
-        margin: 0;
-      }
-      .profileBio {
-        display: inline-block;
-        position: absolute;
-        right: 2%;
-        top: 20px;
-        width: 50%;
-        margin: 0;
-      }
+
+  @media screen and (min-width: 759px) and (max-width: 1118px) {
+    .profileBox {
+      height: 460px;
+      position: relative;
+      width: 100%;
     }
-    @media screen and (min-width: 1119px) {
-      .profileBox {
-        height: 450px;
-      }
-      .profilePic {
-        float: left;
-        margin-left: 20%;
-      }
-      .profileBio {
-        float: left;
-        width: 50%;
-        float: left;
-        display: inline-block;
-        margin: -435px 20% 0 calc(20% + 300px);
-      }
+    .profilePic {
+      display: inline-block;
+      left: 10%;
+      margin: 0;
+      position: absolute;
+      top: 28px;
     }
+    .profileBio {
+      display: inline-block;
+      margin: 0;
+      position: absolute;
+      right: 2%;
+      top: 20px;
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 1119px) {
+    .profileBox {
+      height: 450px;
+    }
+    .profilePic {
+      float: left;
+      margin-left: 20%;
+    }
+    .profileBio {
+      display: inline-block;
+      float: left;
+      margin: -435px 20% 0 calc(20% + 300px);
+      width: 50%;
+    }
+  }
 
 .outer {
-  width: 70%;
+  margin: 0 auto;
   min-width: 300px;
   text-align: center;
-  margin: 0 auto;
+  width: 70%;
 }
 
 .innerGallery {
-  width: 270px;
-  text-align: center;
-  padding: 2.5px;
-  overflow: hidden;
   margin: auto;
+  overflow: hidden;
+  padding: 2.5px;
+  text-align: center;
+  width: 270px;
 }
   @media screen and (min-width: 759px) { 
-  .innerGallery {
-    width: 525px;
+    .innerGallery {
+      width: 525px;
+    }
   }
-}
   @media screen and (min-width: 1119px) {
-  .innerGallery {
-    width: 785px;
+    .innerGallery {
+      width: 785px;
+    }
   }
-}
 
 .tile {
-  width: 250px;
+  background-color: hsla(94, 53%, 48%, .8); /* sage green */
+  box-shadow: 0 0 2.5px hsla(0, 0%, 10%, 0.75); 
+  float: left;
   height: 250px; 
   margin: 5px;
-  float: left;
-  background-color: hsla(94, 53%, 48%, .8); /* sage green */
+  position: relative;
+  width: 250px;
   /* fade in and out hover transition for div */
     -webkit-transition: background-color .33s ease-in;   
+    -webkit-transition: box-shadow .33s ease-in; 
     -webkit-transition-delay: .1s; 
     -moz-transition: background-color .33s ease-in;   
+    -moz-transition: box-shadow .33s ease-in; 
     -moz-transition-delay: .1s; 
     -ms-transition: background-color .33s ease-in;   
+    -ms-transition: box-shadow .33s ease-in;  
     -ms-transition-delay: .1s; 
-    -o-transition: background-color .33s ease-in;   
+    -o-transition: background-color .33s ease-in;
+    -o-transition: box-shadow .33s ease-in;   
     -o-transition-delay: .1s; 
     transition: background-color .33s ease-in;   
+    transition: box-shadow .33s ease-in;  
     transition-delay: .1s;
 }
   .tile:hover {
-    background-color: hsla(0, 0%, 0%, 1); /* black */
+    background-color: hsla(0, 0%, 0%, .7); /* black */
+    box-shadow: 0 0 12px hsla(0, 0%, 0%, 1); /* black */
       -webkit-transition-delay: 0s;
       -moz-transition-delay: 0s;
       -ms-transition-delay: 0s;
@@ -543,39 +508,158 @@ section {
       transition-delay: 0s;
   }
 
-footer {
-  width: 100%;
-  height: 330px;
-  background-color: hsla(0, 0%, 0%, 1); /* black */
-  color: hsla(94, 25%, 85%, 1); /* light green grey*/
-  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.9); 
+.tile p {
+  color: hsla(360, 100%, 100%, .8); /* white */
+  padding-top: 200px;
+  position: absolute;
 }
-  footer h2 {
-    display: block;
-    font-family: "Vidaloka";
-    font-size: 40px;
-    padding: 50px 0 40px 0;
-  }
-  footer ul {
-    margin-bottom: 40px;
-  }
-  footer li {
-    display: inline-block;
-    margin: 0 10px 0 0;
+
+/* PROJECT - Codepen Hover */
+.codepenLogo {
+  background-image: url("../images/Button-Fill-Black-Large.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  /* fade in and out hover transition for div */
+    -webkit-transition: opacity .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: opacity .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: opacity .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: opacity .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: opacity .33s ease-in;   
+    transition-delay: .1s;
+}
+  .codepenLogo:hover {
+    opacity: .75;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
   }
 
-.socialIcon {
+/* PROJECT - GitHub Hover */
+.githubLogo {
+  background-image: url("../images/github-logo-icon-30.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 107%;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  /* fade in and out hover transition for div */
+    -webkit-transition: opacity .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: opacity .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: opacity .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: opacity .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: opacity .33s ease-in;   
+    transition-delay: .1s;
+}
+  .githubLogo:hover {
+    opacity: .85;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
+/* PROJECT - Codepen Hover */
+.genWebLogo {
+  background-image: url("../images/website-icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 86%;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  /* fade in and out hover transition for div */
+    -webkit-transition: opacity .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: opacity .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: opacity .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: opacity .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: opacity .33s ease-in;   
+    transition-delay: .1s;
+}
+  .genWebLogo:hover {
+    opacity: .75;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
+/* PROJECT SAMPLES */
+.projectOne {
+  background-image: url("../images/background1_mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+.projectTwo {
+  background-image: url("../images/coffeeshop2_mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+.projectThree {
+  background-image: url("../images/coffeeshop3_mobile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+
+footer {
+  background-color: hsla(0, 0%, 0%, 1); /* black */
+  box-shadow: 0 -5px 10px hsla(0, 0%, 10%, 0.9); 
+  color: hsla(94, 25%, 85%, 1); /* light green grey*/
+  height: 330px;
+  width: 100%;
+}
+
+footer h2 {
   display: block;
-  height: 50px;
-  width: 50px;
-  padding-top: 2.5px;
-  background-size: 103px 103px;
-  background-position: 50px 0px;
+  font-family: "Vidaloka";
+  font-size: 40px;
+  padding: 50px 0 40px 0;
+}
+
+footer ul {
+  margin-bottom: 40px;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.socialIcon {
   background-color: hsla(360, 100%, 100%, 1); /* white */
+  background-position: 50px 0px;
+  background-size: 103px 103px;
   color: hsla(0, 0%, 0%, 1); /* black */
+  display: block;
   font-size: 36px;
   font-weight: bold;
+  height: 50px;
+  padding-top: 2.5px;
   text-decoration: none;
+  width: 50px;
   /* fade in and out hover transition for icon */
     -webkit-transition: color .33s ease-in;   
     -webkit-transition-delay: .1s; 
@@ -599,22 +683,15 @@ footer {
 
 .resumeIcon {
   font-size: 10px;
-/*  display: block;
-  line-height: .5;
-  margin-top: -30px;*/
+  font-weight: normal;
 }
 </pre>
-		</div>
+		</div> <!-- close #cssBox -->
 
 		<!-- JS CODEBOX -->
 		<div class="codeBox" id="jsBox">
 <pre id=jsCode>
 $(document).ready(function() {
-
-// Project Name: Final Project, Main_mobilefirst
-// Client: FEWD25
-// Author: Andy Aronoff
-// Developer @GA in DC
 
 // anchor animate, #showCode slideToggle, #menuLink slideToggle
 var hrefFull;
@@ -623,10 +700,9 @@ var hrefCodeToggle = 0;
 var menuToggle = 0;
 var htmlPageCode =  $("html").html();
 // var cssPageCode =  $("css").html();
-//// doesn't work for the above: http://stackoverflow.com/questions/9180184/access-css-file-contents-via-javascript
 // var jsPageCode =  $("js").html();
 
-$("nav ul li a").click(function() {
+$("nav ul li a").click(function(event) {
   event.preventDefault();
   hrefFull = event.target.href; // gets the full URL for the anchor clicked in the menu
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0); // strips full URL down to just anchor/id
@@ -668,7 +744,7 @@ $("nav ul li a").click(function() {
   };
 }); // #showCode slideToggle, #menuLink slideToggle
 
-$("#dropdownMenu a").click(function() {
+$("#dropdownMenu a").click(function(event) {
   event.preventDefault();
   hrefFull = event.target.href;
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
@@ -691,7 +767,7 @@ $("#dropdownMenu a").click(function() {
 }); // end anchor animate
 
 // close #showCode div
-$("#showCode div a").click(function() {
+$("#showCode div a").click(function(event) {
   event.preventDefault();
   $("#showCode").slideUp(400);
   hrefCodeToggle = 0;
@@ -699,29 +775,24 @@ $("#showCode div a").click(function() {
 
 // hide #dropdownMenu ul on window resize if showing
 $(window).resize(function() {
-  // This will fire each time the window is resized:
 
-  if ($(window).width() >= 741) { // strange window size?
-    // if large enough, hide
+  // This will fire each time the window is resized:
+  if ($(window).width() >= 741) { // if large enough, hide
     $("#dropdownMenu").hide();
     menuToggle = 0;
-  } else if ($(window).width() < 741 && menuToggle == 1) {
-    // if menu opened and smaller window, keep open
+  } else if ($(window).width() < 741 && menuToggle == 1) { // if menu opened and smaller window, keep open
     $("#dropdownMenu").show();
     menuToggle = 1;
   } else {
-    // outlier cases
-    $("#dropdownMenu").hide();
+    $("#dropdownMenu").hide(); // outlier cases
     menuToggle = 0;
   };
-});
+}); // close window resize
 
 
 }); //close document.ready
 </pre>
-	    </div>
-
-	    <a href="http://www.codepen.io" class="codepenLink">Check this site out on Codepen!</a>
+	    </div> <!-- close #jsBox -->
 	</div> <!-- close #showCode -->
 
 	<a id="homeLink" class="anchor"></a>
@@ -734,7 +805,7 @@ $(window).resize(function() {
 	<section class="about">
 		<h2>Ice Breaker</h2>
 		<table class="iceBreaker">
- 		<!-- format <tr>
+ 		<!-- FORMAT <tr>
 		    <th>Question</th>
 		    <th>Answer</th> 
 		  </tr> -->
@@ -771,7 +842,7 @@ $(window).resize(function() {
 	</section>
 
 	<div class="backgroundImage background2">
-		<h2>#resourceful</h2> <!-- #creative -->
+		<h2>#resourceful</h2> 
 	</div>
 
 	<a id="worksLink" class="anchor"></a>
@@ -782,39 +853,21 @@ $(window).resize(function() {
 				<a href="file:///C:/Users/Andy%20Aronoff/Documents/GitHub/GA_FEWD25_AndyA/Week_11_Final_Projects/main_mobilefirst/index.html">
 					<div class="tile projectOne">
 						<p>Portfolio Site (this page)</p>
-						<div class="codepenLogo"></div>
+						<div class="genWebLogo"></div>
 					</div> 
 				</a>
-				<a href="https://andyaro3.github.io/">
+				<a href="https://andyaro3.github.io/" target="_blank">
 					<div class="tile projectTwo">
-						<p>Sample: Central Cafe</p>
+						<p>Sample: Central Café</p>
 						<div class="githubLogo"></div>
 					</div>
 				</a>
-				<a href="#">
-					<div class="tile">
-						<p>Project 3 Name</p>
+				<a href="http://codepen.io/andyaro3/pen/BzbbgG" target="_blank">
+					<div class="tile projectThree">
+						<p>Sample: Central Café</p>
 						<div class="codepenLogo"></div>
 					</div> 
 				</a>
-<!-- 				<a href="#">
-					<div class="tile">
-						<p>Project 4 Name</p>
-						<div class="codepenLogo"></div>
-					</div> 
-				</a>
-				<a href="#">
-					<div class="tile">
-						<p>Project 5 Name</p>
-						<div class="codepenLogo"></div>
-					</div> 
-				</a>
-				<a href="#">
-					<div class="tile">
-						<p>Project 6 Name</p>
-						<div class="codepenLogo"></div>
-					</div> 
-				</a> -->
 			</div> <!-- .innerGallery close -->
 		</div> <!-- .outer close -->
 	</section>
@@ -827,13 +880,13 @@ $(window).resize(function() {
 	<footer>
 		<h2>Contact</h2>
 		<ul class="social">
-			<li><a href="http://www.facebook.com/andyaro3" class="socialIcon" alt="Facebook">&nbsp; f</a>
+			<li><a href="http://www.facebook.com/andyaro3" class="socialIcon" alt="Facebook" target="_blank">&nbsp; f</a>
 			</a></li>
-			<li><a href="https://www.linkedin.com/in/andrew-aronoff-93b16267?trk=hp-identity-photo" class="socialIcon" alt="LinkedIn">in</a>
+			<li><a href="https://www.linkedin.com/in/andrew-aronoff-93b16267?trk=hp-identity-photo" class="socialIcon" alt="LinkedIn" target="_blank">in</a>
 			</a></li>
-			<li><a href="http://www.github.com/andyaro3" class="socialIcon" alt="GitHub">git</a>
+			<li><a href="http://www.github.com/andyaro3" class="socialIcon" alt="GitHub" target="_blank">git</a>
 			</a></li>
-			<li><a href="" class="socialIcon" alt="Resumé"><span class="resumeIcon">resu</span>mé</a></li>
+			<li><a href="images/AronoffResume 2016Aug23_portfolio.pdf" class="socialIcon" alt="Resumé" target="_blank"><span class="resumeIcon">resu</span>mé</a></li>
 		</ul>
 		<p>&copy; 2016 | Andy Aronoff</p>
 	</footer>
