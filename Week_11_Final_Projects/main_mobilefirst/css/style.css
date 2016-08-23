@@ -524,6 +524,35 @@ section {
       transition-delay: 0s;
   }
 
+.githubLogo {
+  background-image: url("../images/github-logo-icon-30.png");
+  background-size: 107%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /* fade in and out hover transition for div */
+    -webkit-transition: opacity .33s ease-in;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: opacity .33s ease-in;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: opacity .33s ease-in;   
+    -ms-transition-delay: .1s; 
+    -o-transition: opacity .33s ease-in;   
+    -o-transition-delay: .1s; 
+    transition: opacity .33s ease-in;   
+    transition-delay: .1s;
+}
+  .githubLogo:hover {
+    opacity: .75;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+  }
+
 .projectOne {
   background-image: url("../images/background1_mobile.png");
   background-size: 170%;
