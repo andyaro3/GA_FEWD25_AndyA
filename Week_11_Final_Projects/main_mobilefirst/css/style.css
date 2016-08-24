@@ -53,7 +53,7 @@ body {
   background-color: hsla(94, 25%, 85%, 1); /* light green grey*/
   font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.35;
   text-align: center;
 }
 
@@ -330,7 +330,7 @@ section p {
 }
 
 .iceBreaker td {
-  padding: 1px 2.5px 1px 12.5px;
+  padding: 1px 2.5px .5px 12.5px;
 }
 
 .profilePic {
@@ -351,7 +351,7 @@ section p {
     float: left;
     font-size: 56px;
     line-height: .8;
-    padding: 6px 5px 0 2px;
+    padding: 5px 5px 0 2px;
   }
 
   @media screen and (min-width: 759px) and (max-width: 1118px) {
